@@ -1,0 +1,253 @@
+.services {
+  padding-bottom: 30px;
+  &__title {
+    position: relative;
+    top: -17px;
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: @c-lightblue;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 4px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__list-item {
+    text-align: center;
+    width: 165px;
+    img {
+      margin-bottom: 20px;
+    }
+    .item-title {
+      color: #515862;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 11px;
+      line-height: 15px;
+    }
+    .services__list--details {
+      color: @c-lightblue;
+    }
+  }
+}
+
+.portfolio {
+  background: #2e3e4f;
+  padding-top: 50px;
+  padding-bottom: 75px;
+  &__header {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 70px;
+  }
+  &__title {
+    font-size: 30px;
+    font-family: @ff-breeserif;
+    font-weight: normal;
+    color: @c-orange;
+    line-height: 1;
+  }
+  &__btn {
+    display: block;
+    width: 90px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 3px;
+    color: white;
+    background: @c-lightblue;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .portfolio-item {
+    width: 280px;
+  }
+  .portfolio-item__img {
+    width: 260px;
+    height: 200px;
+    margin-bottom: 20px;
+    background: url("/graph/img/main-icon-photo.png") no-repeat 50% 50% #bebebe;
+    border: 10px solid white;
+  }
+  .portfolio-item__title {
+    margin-bottom: 10px;
+    color: @c-orange;
+  }
+  p {
+    font-size: 11px;
+    line-height: 15px;
+    color: #bcbcbc;
+  }
+}
+
+.offer {
+  padding-top: 35px;
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    color: @c-lightblue;
+  }
+  &__content {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    color: #515862;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    list-style: none;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  .offer-item {
+    position: relative;
+    width: 190px;
+    margin-bottom: 20px;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  .offer-item__title {
+    margin-bottom: 10px;
+    color: @c-lightblue; 
+  }
+  &__btn {
+    position: absolute;
+    right: 0;
+    width: 55px;
+    display: block;
+    padding: 7px 0;
+    background: @c-lightblue;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 12px;
+    color: white;
+  }
+}  
+
+.testimonals {
+  padding-top: 30px;
+//  padding-bottom: 200px; /*місце для майбутнього слайдера, я його ше не продумав*/
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 27px; 
+    line-height: 40px;
+    color: @c-lightblue;
+  }
+  &__phrase {
+    display: none;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 800px;
+    text-align: center;
+    font-size: 25px;
+    font-family: @ff-breeserif;
+  }
+  .show {
+    display: block;
+  }
+}
+
+.testimonals__block {
+  position: relative;
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  .element {
+    width: 67px;
+    border-bottom: 6px solid #c1c1c1;
+    transition: all 0.8s; 
+    perspective: 500px;
+    cursor: pointer;
+  }
+  .coin {
+    position: relative;
+    width: 67px;
+    height: 67px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    transition: all 0.6s; 
+    transform-style: preserve-3d;
+  }
+  .front, .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 67px;
+    height: 67px;
+    line-height: 67px;
+    border-radius: 50%;
+    background: #c1c1c1;
+    text-align: center;
+    backface-visibility: hidden;
+  }
+  .back {
+    background: #f88560;
+    transform: rotateY(180deg);
+  }
+  .name {
+    position: absolute;
+//    min-height: 40px;
+    top: 0;
+    left: 10px;  
+    text-align: center;
+    background: #fff;
+//    border: 1px solid red;
+    opacity: 0;
+    color: #f88560;
+    transition: 0.5s all;
+  }
+  .active + .name {
+    opacity: 1;
+  }
+  .active .coin {
+    transform: rotateY(180deg);
+  }
+  .active {
+    border-bottom-color: #f88560;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
