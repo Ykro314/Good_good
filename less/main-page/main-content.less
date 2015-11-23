@@ -1,3 +1,59 @@
+.page__slider { 
+  .slide {
+    padding-top: 110px;
+    box-sizing: border-box;
+    min-height: 490px;
+    text-align: center;
+    background: url("/graph/pict/header-banner-bg.jpg") repeat-x bottom center #2e363e;
+    color: #cccece;
+    h3 {
+      margin-bottom: 15px;
+      font-family: @ff-bebas;
+      font-size: 60px;
+    }
+    p {
+      width: 650px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+    .slider__btn {
+      display: block;
+      width: 250px;
+      margin: 0 auto;
+      background: @c-orange;
+      color: #ffebca;
+      font-size: 25px;
+      font-family: @ff-ubuntu;
+      text-transform: uppercase;
+      padding: 13px 0;
+      border-radius: 5px;
+    }
+  }
+  .controls-wrap {
+    position: relative;
+    padding: 0;
+  }
+  .controls {
+    position: absolute;
+    right: 10px;
+    top: -70px;
+    a {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: #adadad;
+      border-radius: 50%;
+    }
+    a.active {
+      width: 9px;
+      height: 9px;
+      background: @c-lightblue;
+      border: 3px solid @c-orange;
+    }
+  }
+}
+
 .services {
   padding-bottom: 30px;
   &__title {
@@ -16,6 +72,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -46,10 +103,12 @@
   padding-bottom: 75px;
   &__header {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 70px;
   }
   &__title {
+    margin-right: 55px;
     font-size: 30px;
     font-family: @ff-breeserif;
     font-weight: normal;
@@ -62,20 +121,22 @@
     padding: 10px 0;
     text-align: center;
     font-size: 14px;
-    line-height: 1;
     border-radius: 3px;
     color: white;
     background: @c-lightblue;
   }
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
   }
   .portfolio-item {
     width: 280px;
+    margin-right: 20px; 
+    margin-bottom: 20px;
   }
   .portfolio-item__img {
     width: 260px;
@@ -114,6 +175,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     padding-bottom: 30px;

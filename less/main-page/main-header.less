@@ -12,7 +12,7 @@
 }
   &__logo {
     position: relative;
-    display: inline-block;
+//    display: inline-block;
     width: 100px;
     padding-left: 55px;
     font-family: @ff-breeserif;
@@ -39,7 +39,7 @@
     background: #23afc8;
   }
   &__main-navigation {
-    display: inline-flex;
+    display: flex;
     width: 450px;
     list-style: none;
     margin: 0;
@@ -60,60 +60,39 @@
     font-size: 12px;
     background: url("/graph/img/header-icon-search.png") no-repeat 100% 30%;
   }
+  
+  &__open-btn {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    i{
+      display: block;
+      width: 30px;
+      height: 4px;
+      margin: 0 auto;
+      align-self: center;
+      background: #515862;
+    }
+    i:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 5px;
+      width: 30px;
+      height: 4px;
+      background: #515862;
+    }
+    i:after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      left: 5px;
+      width: 30px;
+      height: 4px;
+      background: #515862;
+    }
+  }
 }
 
-.page-header__slider {
-  .slide{
-    padding-top: 110px;
-    box-sizing: border-box;
-    min-height: 490px;
-    text-align: center;
-    background: url("/graph/pict/header-banner-bg.jpg") repeat-x bottom center #2e363e;
-    color: #cccece;
-    h3 {
-      margin-bottom: 15px;
-      font-family: @ff-bebas;
-      font-size: 60px;
-    }
-    p {
-      width: 650px;
-      margin: 0 auto;
-      margin-bottom: 40px;
-      font-size: 14px;
-    }
-    .slider__btn {
-      display: block;
-      width: 250px;
-      margin: 0 auto;
-      background: @c-orange;
-      color: #ffebca;
-      font-size: 25px;
-      font-family: @ff-ubuntu;
-      text-transform: uppercase;
-      padding: 13px 0;
-      border-radius: 5px;
-    }
-  }
-  .controls-wrap {
-    position: relative;
-    padding: 0;
-  }
-  .controls {
-    position: absolute;
-    right: 10px;
-    top: -70px;
-    a {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      background: #adadad;
-      border-radius: 50%;
-    }
-    a.active {
-      width: 9px;
-      height: 9px;
-      background: @c-lightblue;
-      border: 3px solid @c-orange;
-    }
-  }
-}
