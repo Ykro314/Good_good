@@ -73,6 +73,7 @@ footer {
     border-radius: 3px;
   }
   input[type="submit"] {
+    display: block;
     position: absolute;
     right: 0;
     width: 75px;
@@ -82,6 +83,10 @@ footer {
     border: none;
     border-radius: 3px;
     color: white;
+    transition: all 0.3s;
+  }
+  input[type="submit"]:hover {
+    background: @c-darkblue;
   }
 }
 
@@ -129,13 +134,13 @@ footer {
     padding-left: 45px;
   }
   .contact-item--phone {
-    background: url("/graph/img/footer-icon-phone.png") no-repeat 0 7px;
+    background: url("../graph/img/footer-icon-phone.png") no-repeat 0 7px;
   }
   .contact-item--mobile {
-    background: url("/graph/img/footer-icon-mobile.png") no-repeat 0 7px;
+    background: url("../graph/img/footer-icon-mobile.png") no-repeat 0 7px;
   }
   .contact-item--message {
-    background: url("/graph/img/footer-icon-message.png") no-repeat 0 15px;
+    background: url("../graph/img/footer-icon-message.png") no-repeat 0 15px;
   }
 }
 
