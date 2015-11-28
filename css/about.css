@@ -1,0 +1,158 @@
+main {
+  padding-bottom: 100px;
+}
+.page-banner {
+  padding: 105px 0;
+  background: url("/graph/pict/page-banner-all.jpg") repeat-x top center #2e363e;
+}
+.page-banner__title {
+  font-size: 80px;
+  text-align: center;
+  color: #cccece;
+}
+.about-us {
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.about-us__title {
+  font-size: 50px;
+  line-height: 80px;
+  text-align: center;
+  font-family: BebasNeue, "Arial", sans-serif;
+  color: #2190c1;
+}
+.about-us__content {
+  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+.about-us__phrase {
+  font-size: 70px;
+  text-align: center;
+  font-family: BebasNeue, "Arial", sans-serif;
+  text-transform: uppercase;
+}
+.features {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+.features__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.features .features-item {
+  padding: 40px 15px 25px 15px;
+  text-align: center;
+  border-left: 1px solid #dcdcdc;
+  vertical-align: bottom;
+}
+.features .features-item:last-child {
+  border-right: 1px solid #dcdcdc;
+}
+.features figure {
+  display: flex;
+  height: 130px;
+  margin: 0;
+  justify-content: center;
+}
+.features img {
+  align-self: center;
+}
+.features .features-item__title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 36px;
+  color: #2190c1;
+}
+.features .features-item__content {
+  font-size: 13px;
+  line-height: 18px;
+}
+.team {
+  padding-top: 40px;
+}
+.team__title {
+  margin-bottom: 30px;
+  font-size: 50px;
+  line-height: 80px;
+  text-align: center;
+  font-family: BebasNeue, "Arial", sans-serif;
+  color: #2190c1;
+}
+.team__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.team .team-card {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  width: 380px;
+  margin-bottom: 50px;
+  padding: 12px;
+  outline: 1px solid #cccccc;
+  box-shadow: 10px -10px 0 0 #d3d3d3;
+}
+.team .team-card img {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.team .team-card .card--aside {
+  margin-left: 140px;
+  text-align: center;
+}
+.team .team-card .card__position {
+  font-size: 17px;
+  line-height: 35px;
+}
+.team .team-card .card__name {
+  font-size: 32px;
+  font-family: BebasNeue, "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #2190c1;
+  font-weight: bold;
+}
+.team .team-card .card__email {
+  font-size: 13px;
+  line-height: 28px;
+  color: #94979b;
+}
+.team .team-card .card__skills {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px 140px;
+  padding: 8px 0;
+  list-style: none;
+}
+.team .team-card .card__skills-item {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background: #2190c1;
+  border-radius: 4px;
+}
+.team .team-card .card__skills-item:nth-child(2) {
+  background: #29aecb;
+}
+.team .team-card .card__skills-item:nth-child(3) {
+  background: #0481d9;
+}
+.team .team-card .card__skills-item:nth-child(4) {
+  background: #f7941d;
+}
+.team .team-card .card__profile {
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+.team .team-card:nth-child(odd) {
+  box-shadow: -10px -10px 0 0 #d3d3d3;
+}

@@ -1,0 +1,180 @@
+main {
+  padding-bottom: 100px;
+}
+
+.page-banner {
+  padding: 105px 0;
+  background: url("/graph/pict/page-banner-all.jpg") repeat-x top center @bg-banner;
+  &__title {
+    font-size: 80px;
+    text-align: center;
+    color: @c-lightgrey-banner;
+  }
+}
+
+.about-us {
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+  &__title {
+    font-size: 50px;
+    line-height: 80px;
+    text-align: center;
+    font-family: @ff-bebas;
+    color: @c-lightblue;
+  }
+  &__content{
+   margin-bottom: 20px;
+   font-size: 13px;
+   line-height: 20px;
+   text-align: center;
+  }
+  &__phrase {
+    font-size: 70px;
+    text-align: center;
+    font-family: @ff-bebas;
+    text-transform: uppercase;
+  }
+}
+
+.features {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .features-item {
+    padding: 40px 15px 25px 15px;
+    text-align: center;
+    border-left: 1px solid #dcdcdc;
+    vertical-align: bottom;
+  }
+  .features-item:last-child {
+    border-right: 1px solid #dcdcdc;
+  }
+  figure{
+    display: flex;
+    height: 130px;
+    margin: 0;
+    justify-content: center;
+  }
+  img {
+    align-self: center;
+  }
+  .features-item__title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 36px;
+    color: @c-lightblue;
+  }
+  .features-item__content {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+.team {
+  padding-top: 40px;
+//  padding-bottom: 105px;
+  &__title {
+    margin-bottom: 30px;
+    font-size: 50px;
+    line-height: 80px;
+    text-align: center;
+    font-family: @ff-bebas;
+    color: @c-lightblue;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .team-card {
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    width: 380px;
+    margin-bottom: 50px;
+    padding: 12px;
+    outline: 1px solid #cccccc;
+    box-shadow: 10px -10px 0 0 #d3d3d3;
+    img {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+    }
+    .card--aside{
+      margin-left: 140px;
+      text-align: center;
+    }
+    .card__position {
+      font-size: 17px;
+      line-height: 35px;
+    }
+    .card__name {
+      font-size: 32px;
+      font-family: @ff-bebas;
+      text-transform: uppercase;
+      color: @c-lightblue;
+      font-weight: bold;
+    }
+    .card__email {
+      font-size: 13px;
+      line-height: 28px;
+      color: #94979b;
+    }
+    .card__skills {
+      display: flex;
+      justify-content: center;
+      margin: 0 0 20px 140px;
+      padding: 8px 0;
+      list-style: none;
+    }
+    .card__skills-item {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      margin-left: 10px;
+      background: @c-lightblue;
+      border-radius: 4px;
+    }
+    .card__skills-item:nth-child(2){
+      background: #29aecb;
+    }
+    .card__skills-item:nth-child(3){
+      background: #0481d9;
+    }
+    .card__skills-item:nth-child(4){
+      background: #f7941d;
+    }
+    .card__profile {
+      margin-bottom: 15px;
+      line-height: 20px;
+    }
+  }
+  .team-card:nth-child(odd){
+    box-shadow: -10px -10px 0 0 #d3d3d3
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
