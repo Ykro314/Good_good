@@ -1,0 +1,43 @@
+@media (max-width: 925px) {
+  .team {
+    &__wrap {
+      justify-content: center;
+    }
+    .team-card:nth-child(odd) {
+      box-shadow: 10px -10px 0 0 #d3d3d3;
+    }
+  }
+}  
+
+@media (max-width: 850px) {
+  .features {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .features-item:nth-child(2) {
+      border-right: 1px solid #dcdcdc;
+    }
+    .features-item {
+      width: 44%;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .about-us {
+    &__phrase {
+      font-size: 50px;  
+    }
+  }
+  .features {
+    .features-item {
+      width: 100%;
+      border: none;
+    }
+    .features-item:nth-child(2),
+    .features-item:last-child{
+      border-right: none;
+    } 
+  }
+}
