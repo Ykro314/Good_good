@@ -21,20 +21,67 @@
 @media (max-width: 450px) {
   .page-header {
      &__menu > .inner {
-      padding-bottom: 60px;
+      padding-bottom: 80px;
+      position: relative;
     }
     &__main-navigation {
-      display: none;
+      position: absolute;
+      z-index: 10;
+      top: 70px;
+      left: 0;
+      flex-wrap: wrap;
+      transform: translate(-100%);
+      background: white;
+      transition: all 0.5s ease-in;
+      transition-delay: 0.5s;
+    }
+    &__main-navigation--translated {
+      transform: translate(0);
+    }
+    &__navigation-item {
+      text-align: center;
+      width: 100%;
+    }
+    .selected-item:after {
+      left: 49%;
+    }
+    .item-blog {
+      margin-top: 15px;
+      margin-bottom: 20px;
+      justify-content: center;
     }
     &__open-btn {
 //      order: 3;
       display: flex;
       position: absolute;
-      top: 60px;
+      top: 85px;
       right: 10px;
+      transform: translateX(0);
     }
+    &__open-btn--animation {
+      animation-name: btn-translate;
+      animation-duration: 2s;
+      animation-timing-function: ease-out;
+    }
+    &__open-btn--animation-2 {
+      animation-name: btn-translate-2;
+      animation-duration: 2s;
+      animation-timing-function: ease-out;
+    }
+    .active:after {
+      opacity: 0;
+    }
+    .active:before {
+      transform: rotate(90deg) translateX(-10px) translateY(5px);
+    }
+    .active {
+      transform: rotate(45deg);
+    }
+    
   }
 }
+
+
 
 /*Media for Footer ====================================================================================*/
 @media (max-width: 950px){
@@ -87,3 +134,38 @@
     }
   }
 }
+
+
+@keyframes btn-translate {
+  50%{
+    transform: translateX(100px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes btn-translate-2 {
+  50%{
+    transform: translateX(100px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

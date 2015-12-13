@@ -71,6 +71,7 @@ main {
 }
 .contact-form__captcha {
   display: flex;
+  position: relative;
 }
 .contact-form__captcha figure {
   width: 100%;
@@ -83,7 +84,8 @@ main {
 }
 .contact-form input[type="submit"] {
   position: absolute;
-  right: 45px;
+  right: 0;
+  top: 73px;
   padding: 5px 30px;
   font-size: 16px;
   background: #2190c1;
@@ -94,6 +96,14 @@ main {
 .contact-info {
   width: 50%;
   padding-left: 60px;
+}
+.contact-info .contact-info__title {
+  display: none;
+  margin-bottom: 20px;
+  font-family: BebasNeue, "Arial", sans-serif;
+  text-align: center;
+  font-size: 45px;
+  text-transform: uppercase;
 }
 .contact-info__list {
   list-style: none;
@@ -160,6 +170,10 @@ main {
   width: 45px;
   height: 45px;
   border-radius: 50%;
+  transition: all 0.7s;
+}
+.contact-info__follow .follow-us__item:hover {
+  transform: scale(1.2) rotate(360deg);
 }
 .contact-info__follow .icon-tw {
   background: url("/graph/img/contact-icon-tw.png") no-repeat bottom left #00acf0;
@@ -178,4 +192,59 @@ main {
 }
 .contact-info__follow .icon-gplus {
   background: url("/graph/img/contact-icon-gplus.png") no-repeat bottom left #d0422b;
+}
+@media (max-width: 960px) {
+  .contact-form {
+    padding-left: 0;
+  }
+  .contact-form__captcha {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .contact-form__captcha-box {
+    width: 60%;
+  }
+  .contact-form input[type="submit"] {
+    position: static;
+    align-self: center;
+  }
+  .contact-info {
+    padding-left: 45px;
+  }
+}
+@media (max-width: 720px) {
+  .contact-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contact-wrapper .contact-form {
+    width: 80%;
+    padding: 0;
+    padding-bottom: 20px;
+    border-right: none;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .contact-wrapper .contact-info {
+    padding: 0;
+    width: 80%;
+  }
+  .contact-wrapper .contact-info__title {
+    display: block;
+  }
+  .contact-wrapper #map {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .contact-wrapper .contact-form {
+    width: 100%;
+  }
+  .contact-wrapper .contact-info {
+    width: 100%;
+  }
+  .contact-wrapper .contact-info__follow .follow-us__item {
+    width: 41px;
+    height: 41px;
+  }
 }

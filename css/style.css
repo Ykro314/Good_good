@@ -10,6 +10,7 @@
 body {
   font-family: "Ubuntu", "Arial", sans-serif;
   color: #515862;
+  overflow-x: hidden;
 }
 p,
 h1,
@@ -42,6 +43,13 @@ a:hover {
   max-width: 920px;
   padding: 0 10px;
   margin: 0 auto;
+}
+.page-header {
+  /*&__navigation-item a:hover{
+    background: #12a3d6;
+    color: white;
+    transition: all 0.3s; 
+  }*/
 }
 .page-header a,
 .page-header a:active,
@@ -89,7 +97,7 @@ a:hover {
   padding: 0;
   justify-content: space-between;
 }
-.page-header .page-header__navigation-item {
+.page-header__navigation-item {
   position: relative;
   transition: all 0.6s;
 }
@@ -103,6 +111,7 @@ a:hover {
 .page-header .selected-item:before {
   content: "";
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 100%;
   height: 12px;
@@ -123,7 +132,7 @@ a:hover {
   animation: menu-item--2 0.65s ease-in;
 }
 .page-header .item-blog {
-  display: flex;
+  display: inline-flex;
 }
 .page-header .item-blog a {
   align-self: center;
@@ -158,6 +167,7 @@ a:hover {
 }
 .page-header__open-btn {
   display: none;
+  z-index: 10;
   position: relative;
   width: 40px;
   height: 40px;
@@ -362,16 +372,60 @@ footer .inner {
 }
 @media (max-width: 450px) {
   .page-header__menu > .inner {
-    padding-bottom: 60px;
+    padding-bottom: 80px;
+    position: relative;
   }
   .page-header__main-navigation {
-    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 70px;
+    left: 0;
+    flex-wrap: wrap;
+    transform: translate(-100%);
+    background: white;
+    transition: all 0.5s ease-in;
+    transition-delay: 0.5s;
+  }
+  .page-header__main-navigation--translated {
+    transform: translate(0);
+  }
+  .page-header__navigation-item {
+    text-align: center;
+    width: 100%;
+  }
+  .page-header .selected-item:after {
+    left: 49%;
+  }
+  .page-header .item-blog {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
   }
   .page-header__open-btn {
     display: flex;
     position: absolute;
-    top: 60px;
+    top: 85px;
     right: 10px;
+    transform: translateX(0);
+  }
+  .page-header__open-btn--animation {
+    animation-name: btn-translate;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  .page-header__open-btn--animation-2 {
+    animation-name: btn-translate-2;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  .page-header .active:after {
+    opacity: 0;
+  }
+  .page-header .active:before {
+    transform: rotate(90deg) translateX(-10px) translateY(5px);
+  }
+  .page-header .active {
+    transform: rotate(45deg);
   }
 }
 /*Media for Footer ====================================================================================*/
@@ -416,5 +470,21 @@ footer .inner {
   }
   .column-contact .contact-item {
     padding-left: 60px;
+  }
+}
+@keyframes btn-translate {
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes btn-translate-2 {
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

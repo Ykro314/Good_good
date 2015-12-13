@@ -74,6 +74,7 @@ main {
   }
   &__captcha {
     display: flex;
+    position: relative;
     figure {
       width: 100%;
       margin-left: 0;
@@ -86,7 +87,8 @@ main {
   }
   input[type="submit"] {
     position: absolute;
-    right: 45px;
+    right: 0;
+    top: 73px;
     padding: 5px 30px;
     font-size: 16px;
     background: @c-lightblue;
@@ -99,6 +101,14 @@ main {
 .contact-info {
   width: 50%;
   padding-left: 60px;
+  .contact-info__title {
+    display: none;
+    margin-bottom: 20px;
+    font-family: @ff-bebas;
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+  }
   &__list {
     list-style: none;
     padding: 0;
@@ -167,6 +177,10 @@ main {
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    transition: all 0.7s;
+  }
+  .follow-us__item:hover {
+    transform: scale(1.2) rotate(360deg);
   }
   .icon-tw {
     background: url("/graph/img/contact-icon-tw.png") no-repeat bottom left #00acf0;
