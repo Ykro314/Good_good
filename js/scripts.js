@@ -1,4 +1,5 @@
 (function() {
+  
 var element = document.querySelectorAll( ".element" );
 var phrase = document.querySelectorAll(".testimonals__phrase");
 
@@ -11,7 +12,7 @@ for( var i = 0; i < element.length; i++ ) {
     
     this.classList.add( "active" );
     
-    function showPhrase(){  
+    function showPhrase() {  
   
       for ( i = 0; i < element.length; i++ ){
         phrase[i].classList.remove( "show" );
@@ -27,6 +28,7 @@ for( var i = 0; i < element.length; i++ ) {
     showPhrase();
   }, false );
 };
+  
   
 var btn = document.querySelector( ".page-header__open-btn" );
 var menu = document.querySelector( ".page-header__main-navigation" );
@@ -52,6 +54,22 @@ btn.addEventListener( "click", function( event ) {
 }, false ); 
   
   
+var category_btn = document.querySelector( ".gallery-nav__category" );
+var category_list = document.querySelector( ".category-list" );
+  
+category_btn.addEventListener( "click", function( event ) {
+  if( event.target == category_btn ) {
+    category_list.classList.toggle( "category-list--active" );
+    category_btn.classList.toggle( "gallery-nav__category--active" );
+  }
+})
+
+category_list.addEventListener( "click", function( event ) {
+  var target = event.target;
+  target.classList.toggle( "item-active" );
+})
+
+
 })();
 
 
@@ -70,3 +88,17 @@ btn.addEventListener( "click", function(event) {
   }, 1000);
   
 }, false ); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

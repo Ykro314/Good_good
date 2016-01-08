@@ -1,0 +1,380 @@
+/*====================================== Portfolio-content START =======================================*/
+
+.page-banner {
+  padding: 105px 0;
+  background: url("/graph/pict/page-banner-all.jpg") repeat-x top center @bg-banner;
+  &__title {
+    font-size: 80px;
+    text-align: center;
+    color: @c-lightgrey-banner;
+  }  
+}   
+
+.gallery {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid @border-portfolio-nav;
+  &__title {
+    margin-bottom: 40px;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: @c-lightblue;
+  }  
+}
+
+
+.gallery-nav {
+  border-top: 1px solid @border-portfolio-nav;
+  border-bottom: 1px solid @border-portfolio-nav;
+}
+.gallery-nav > .inner {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1px solid @border-portfolio-nav;
+  border-right: 1px solid @border-portfolio-nav;
+}
+.gallery-nav__groups-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    align-self: center;
+    position: relative;
+    padding: 0 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: @ff-ubuntu;
+  }
+  li:after {
+    position: absolute;
+    right: 0;
+//    top: calc( 50% - 20px );
+    top: -4px;
+    content: "";
+    width: 1px;
+    height: 25px;
+    background: #c3c4c4;
+  }
+  li:last-child:after {
+    display: none;
+  }
+}
+
+
+.gallery-nav__category {
+  position: relative;
+  padding: 20px 50px 20px 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;  
+  transition: 0.5s all;
+}
+//.gallery-nav__category:hover .category-list {
+//  max-height: 200px;
+//  opacity: 1;
+//}
+.gallery-nav__category--active {
+  background: @c-lightblue;
+  color: white;
+}
+.gallery-nav__category:before { 
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  width: 0px;
+  height: 0px;
+  border: 6px solid @color-body;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  transform: rotate(45deg);
+}
+.gallery-nav__category:after {
+  content: "";
+  position: absolute;
+  top: 39%;
+  right: 17.5%;
+  width: 3px;
+  height: 8px;
+  background: @color-body;
+}
+.gallery-nav__category--active:after{
+  background: white;
+}
+.gallery-nav__category--active:before{
+  border-right-color: white;
+  border-bottom-color: white;
+}
+
+
+.category-list { 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  max-height: 0px;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 0;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.5s all;
+//  border: 1px solid red;
+  list-style: none;
+  background: @c-orange;
+  li {
+    position: relative;
+    padding-left: 11px;
+    text-transform: none;
+    color: #f9f5d2;
+    font-size: 13px;
+    line-height: 30px;
+    border-bottom: 1px solid #f9af8c;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+  li:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 35%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f9f5d2;
+  }
+  .item-active:after {
+    background: @c-lightblue;
+  }
+}
+.category-list--active {
+  max-height: 200px;
+  opacity: 1;
+}
+
+
+.gallery-nav__grid-btn {
+  width: 30px;
+  height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: center;
+}
+.gallery-nav__grid-btn--lines {
+  background: url("/graph/img/portfolio-gallery-btn-line.png") no-repeat center;
+}
+.gallery-nav__grid-btn--square {
+  background: url("/graph/img/portfolio-gallery-btn-square.png") no-repeat center;
+}
+
+.gallery-container {
+  .inner {
+    padding-top: 45px;
+    padding-bottom: 20px;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .gallery-item {
+    position: relative;
+    width: 275px;
+    height: 205px;
+    margin-bottom: 45px;
+    padding: 25px;
+    box-sizing: border-box;
+    background: red;
+    text-align: center;
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    &__title,
+    &__intro,
+    &__btn {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      color: white;
+    }
+    &__title,
+    &__btn {
+      font-family: @ff-breeserif;
+    }
+    &__title {
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: normal;
+    }
+    &__intro {
+      font-size: 11px;
+      line-height: 15px;
+      margin-bottom: 20px;
+    }
+    &__btn {
+      display: inline-block;
+      padding: 12px 24px 12px 60px;
+      font-size: 17px;
+      border: 1px solid white;
+      border-radius: 4px;
+      background: url("/graph/img/portfolio-gallery-eye.png") no-repeat 15px center;
+    }
+  }
+}
+
+.gallery-controls {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  &__btn {
+    display: block;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 5px 10px;
+    background: #aaaaaa;
+    color: white;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+  &__btn--prev,
+  &__btn--next {
+    background: @c-lightblue;
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+.testimonals {
+  padding-top: 30px;
+//  padding-bottom: 200px; /*місце для майбутнього слайдера, я його ше не продумав*/
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 27px; 
+    line-height: 40px;
+    color: @c-lightblue;
+  }
+  &__phrase {
+    display: none;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 800px;
+    text-align: center;
+    font-size: 25px;
+    font-family: @ff-breeserif;
+  }
+  .show {
+    display: block;
+  }
+}
+
+.testimonals__block {
+  position: relative;
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  .element {
+    width: 67px;
+    border-bottom: 6px solid #c1c1c1;
+    transition: all 0.8s; 
+    perspective: 500px;
+    cursor: pointer;
+  }
+  .coin {
+    position: relative;
+    width: 67px;
+    height: 67px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    transition: all 0.6s; 
+    transform-style: preserve-3d;
+  }
+  .front, .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 67px;
+    height: 67px;
+    line-height: 67px;
+    border-radius: 50%;
+    background-color: @c-gray-testimonals;
+    text-align: center;
+    backface-visibility: hidden;
+  }
+  .male .front {
+    background: url("../graph/img/main-testimonals-icon-male.png") no-repeat bottom center @c-gray-testimonals; 
+  }
+  .female .front {
+    background: url("../graph/img/main-testimonals-icon-female.png") no-repeat bottom center @c-gray-testimonals;
+  } 
+  .back {
+    background: @c-orange-testimonals;
+    transform: rotateY(180deg);
+  }
+  .male .back {
+    background: url("../graph/img/main-testimonals-icon-male.png") no-repeat bottom center @c-orange-testimonals;
+  }
+  .female .back {
+    background: url("../graph/img/main-testimonals-icon-female.png") no-repeat bottom center @c-orange-testimonals;
+  }
+  .name {
+    position: absolute;
+//    min-height: 40px;
+    top: 0;
+    left: 10px;  
+    text-align: center;
+    background: #fff;
+//    border: 1px solid red;
+    opacity: 0;
+    color: #f88560;
+    transition: 0.5s all;
+  }
+  .active + .name {
+    opacity: 1;
+  }
+  .active .coin {
+    transform: rotateY(180deg);
+  }
+  .active {
+    border-bottom-color: #f88560;
+  }
+  .active:after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 45%;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background: #f88560;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== Portfolio-content END =======================================*/
+/*=======================*/
+/*=======================*/

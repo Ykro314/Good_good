@@ -1,4 +1,4 @@
-/*Media for header =============================================================================*/
+/*============================  Media for header START =============================================================================*/
 
 @media (max-width: 800px) {
   .page-header {
@@ -32,8 +32,8 @@
       flex-wrap: wrap;
       transform: translate(-100%);
       background: white;
-      transition: all 0.5s ease-in;
-      transition-delay: 0.5s;
+      transition: all 0.5s ease-in-out;
+      transition-delay: 0.90s;
     }
     &__main-navigation--translated {
       transform: translate(0);
@@ -60,13 +60,13 @@
     }
     &__open-btn--animation {
       animation-name: btn-translate;
-      animation-duration: 2s;
-      animation-timing-function: ease-out;
+      animation-duration: 2.5s;
+      animation-timing-function: ease-in-out;
     }
     &__open-btn--animation-2 {
       animation-name: btn-translate-2;
-      animation-duration: 2s;
-      animation-timing-function: ease-out;
+      animation-duration: 3.5s;
+      animation-timing-function: ease-in-out;
     }
     .active:after {
       opacity: 0;
@@ -77,13 +77,18 @@
     .active {
       transform: rotate(45deg);
     }
-    
+    &__navigation-item:hover{
+//    background: #12a3d6;
+    box-shadow: inset 500px 0 0 0 #12a3d6; 
+  }
   }
 }
+/*=================== Media for header END =====================================*/
+/*====================*/
+/*====================*/
 
 
-
-/*Media for Footer ====================================================================================*/
+/*================================== Media for Footer START ====================================================================================*/
 @media (max-width: 950px){
   footer {
     .inner {
@@ -137,22 +142,37 @@
 
 
 @keyframes btn-translate {
+  10% {
+    transform: scale(0.6);
+  }
+  30% {
+    transform: scale(1);
+  }
   50%{
     transform: translateX(100px);
   }
   100%{
     transform: translateX(0);
   }
-}
+}  
 
 @keyframes btn-translate-2 {
-  50%{
+  10% {
+    transform: scale(0.6);
+  }
+  25% {
+    transform: scale(1);
+}
+  30%{
     transform: translateX(100px);
   }
   100%{
     transform: translateX(0);
   }
 }
+/*=================== Media for footer END =====================================*/
+/*====================*/
+/*====================*/
 
 
 

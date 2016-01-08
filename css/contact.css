@@ -1,3 +1,4 @@
+/*====================================== Contact-content START =======================================*/
 main {
   padding-bottom: 70px;
 }
@@ -193,6 +194,10 @@ main {
 .contact-info__follow .icon-gplus {
   background: url("/graph/img/contact-icon-gplus.png") no-repeat bottom left #d0422b;
 }
+/*====================================== Contact-content END =======================================*/
+/*=========================*/
+/*=========================*/
+/*====================================== Media for contact-content START =======================================*/
 @media (max-width: 960px) {
   .contact-form {
     padding-left: 0;
@@ -248,3 +253,6 @@ main {
     height: 41px;
   }
 }
+/*====================================== Media for contact-content END =======================================*/
+/*=========================*/
+/*=========================*/

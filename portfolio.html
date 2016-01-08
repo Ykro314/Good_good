@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
- 
+  
   <head>
     <title>Good Goods Responsive layout developed by Ykro314</title>
     <meta charset="utf-8">
@@ -11,22 +10,22 @@
     <meta name="keywords" content="desighn, front-end, developing, mark-up, responsive, adaptive, layout, multiple, landing-page">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel=stylesheet href="css/style.css">
-    <link rel=stylesheet href="css/main.css">
+    <link rel=stylesheet href="css/portfolio.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700' rel='stylesheet' type='text/css'>
-  </head> 
-  
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+  </head>
   
   
   <body>
   
-    <header class="page-header"><!--======================================-->
+   <header class="page-header"><!--======================================-->
 
       <nav class="page-header__menu">
         <div class="inner">
           <div class="page-header__logo">Your logo</div>
           <ul class="page-header__main-navigation" role="navigation">
-            <li class="page-header__navigation-item  selected-item"><a href="#">Home</a></li>
-            <li class="page-header__navigation-item"><a href="portfolio.html">Portfolio</a></li>
+            <li class="page-header__navigation-item"><a href="index.html">Home</a></li>
+            <li class="page-header__navigation-item  selected-item"><a href="#">Portfolio</a></li>
             <li class="page-header__navigation-item"><a href="about.html">About</a></li>
             <li class="page-header__navigation-item"><a href="contact.html">Contact</a></li>
             <li class="page-header__navigation-item  item-blog"><a href="#">Blog</a></li>
@@ -38,113 +37,107 @@
       
     </header> 
     
-    
-    
-    <main> <!--=========================================================================-->
+    <main> <!--=====================================================================================================================-->
+     <div class="page-banner">
+       <h1 class="page-banner__title">Portfolio</h1>
+     </div>
      
-      <section class="page__slider">
-          <div class="slide">
-            <div class="inner">
-              <h3>Good desighn is good business</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quae, vitae inventore harum eius consequuntur officia possimus excepturi soluta laudantium?</p>
-              <a href="#" class="slider__btn">Learn more</a>
-            </div>
-          </div>
-         <div class="inner  controls-wrap">
-             <div class="controls">
-              <a href="#"></a>
-              <a class="active" href="#"></a>
-              <a href="#"></a>
-              <a href="#"></a>
-              <a href="#"></a>
-            </div>
-          </div>
-      </section>
-      
-      <section class="services">
-        <div class="inner">
-          <h2 class="services__title">Our services</h2>
-          <ul class="services__list">
-            <li class="services__list-item">
-              <img src="graph/img/main-img-desighn.png" alt="Desighn">
-              <h3 class="item-title">Web desighn</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias vel labore, repudiandae sint. Ut, ab. <a href="#" class="services__list--details">Details ...</a></p>
-            </li>
-            <li class="services__list-item">
-              <img src="graph/img/main-img-seo.png" alt="SEO">
-              <h3 class="item-title">Search optimization</h3>
-              <p>Quaerat incidunt adipisci mollitia, excepturi eligendi repellendus sed, consequatur id at, totam aperiam, atque explicabo! <a href="#" class="services__list--details">Details ...</a></p>
-            </li>
-            <li class="services__list-item">
-              <img src="graph/img/main-img-shop.png" alt="Shop">
-              <h3 class="item-title">Online shop</h3>
-              <p>Culpa quasi natus, sed, velit quo, quis esse veniam nihil magnam temporibus eius. Accusantium, rem. <a href="#" class="services__list--details">Details ...</a></p>
-            </li>
-            <li class="services__list-item">
-              <img src="graph/img/main-img-social.png" alt="Social">
-              <h3 class="item-title">Social media</h3>
-              <p>Optio, blanditiis, temporibus. Eveniet sint cum dolorem vitae minima, tempora labore sapiente magni, nostrum a. <a href="#" class="services__list--details">Details ...</a></p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      
-      <section class="portfolio">
-        <div class="inner">
-          <div class="portfolio__header">
-            <h2 class="portfolio__title">Our portfolio is awesome</h2>
-            <a href="#" class="portfolio__btn">More Works</a>
-          </div>
-          <ul class="portfolio__list">
-            <li class="portfolio-item">
-              <div class="portfolio-item__img"></div>
-              <h3 class="portfolio-item__title">Lorem ipsum dolor.</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, neque!</p>
-            </li>
-            <li class="portfolio-item">
-              <div class="portfolio-item__img"></div>
-              <h3 class="portfolio-item__title">Placeat, non, quos.</h3>
-              <p>Inventore error dolorem quia asperiores ut quam tenetur quasi unde.</p>
-            </li>
-            <li class="portfolio-item">
-              <div class="portfolio-item__img"></div>
-              <h3 class="portfolio-item__title">Corporis, illum, quis!</h3>
-              <p>Delectus corrupti soluta perspiciatis, blanditiis quo fugit consequuntur. Ducimus, at!</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      
-      <section class="offer">
-        <div class="inner">
-          <h2 class="offer__title">What we offer</h2>
-          <p class="offer__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dolor ipsam sunt, totam quam, consequatur amet quod ea voluptate recusandae consequuntur tenetur saepe magnam aspernatur ex voluptatibus perspiciatis culpa. Dolores repellendus enim, facere alias dicta libero aliquid deleniti beatae pariatur?</p>
-          <ul class="offer__list">
-            <li class="offer-item">
-              <h3 class="offer-item__title">Web desighn</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum esse consectetur vel iste soluta delectus molestias totam distinctio a quod.</p>
-              <a href="#" class="offer__btn">Details</a>
-            </li>
-            <li class="offer-item">
-              <h3 class="offer-item__title">Search optimization</h3>
-              <p>Nostrum minima, quia ipsa tempore consequuntur possimus ex eos repellendus enim ducimus sunt impedit, sapiente reprehenderit deleniti id nisi quaerat!</p>
-              <a href="#" class="offer__btn">Details</a>
-            </li>
-            <li class="offer-item">
-              <h3 class="offer-item__title">Online shop</h3>
-              <p>Iusto modi debitis ratione, recusandae dolor, quos maiores minima id quas adipisci sit fugiat accusamus tempora ipsam dolorum praesentium molestiae.</p>
-              <a href="#" class="offer__btn">Details</a>
-            </li>
-            <li class="offer-item">
-              <h3 class="offer-item__title">Social media</h3>
-              <p>Vel adipisci blanditiis corporis voluptate quibusdam soluta incidunt reprehenderit suscipit, amet inventore deleniti natus dolorem architecto odio error magni commodi.</p>
-              <a href="#" class="offer__btn">Details</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      
-      <section class="testimonals">
+     <section class="gallery">
+       <div class="inner">
+         <h2 class="gallery__title">Test it the Good Projects</h2>
+       </div>
+       <nav class="gallery-nav">
+         <div class="inner">
+           <ul class="gallery-nav__groups-list">
+             <li>All</li>
+             <li>Web Design</li>
+             <li>Advertising</li>
+             <li>Identity</li>
+             <li>Illustation</li>
+           </ul>
+           <div class="gallery-nav__category">Category
+             <ul class="category-list">
+               <li>Lorem.</li>
+               <li>Eum.</li>
+               <li>Quos.</li>
+               <li>Eum.</li>
+               <li>Quaerat.</li>
+             </ul>
+           </div>
+           <div class="gallery-nav__grid-btn gallery-nav__grid-btn--lines"></div>
+           <div class="gallery-nav__grid-btn gallery-nav__grid-btn--square"></div>
+         </div>
+       </nav>
+       <section class="gallery-container">
+         <div class="inner">
+           <ul>
+             <li class="gallery-item">
+               <img class="gallery-item__img" src="http://placehold.it/275x205" alt="gallery-image">
+               <h2 class="gallery-item__title">Lorem ipsum dolor.</h2>
+               <p class="gallery-item__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium labore nemo, architecto officia ipsum, delectus?</p>
+               <a href="" class="gallery-item__btn">Details</a>
+             </li>
+             <li class="gallery-item">
+               <img class="gallery-item__img" src="http://placehold.it/275x205" alt="gallery-image">
+               <h2 class="gallery-item__title">Lorem ipsum dolor.</h2>
+               <p class="gallery-item__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium labore nemo, architecto officia ipsum, delectus?</p>
+               <a href="" class="gallery-item__btn">Details</a>
+             </li>
+             <li class="gallery-item">
+               <img class="gallery-item__img" src="http://placehold.it/275x205" alt="gallery-image">
+               <h2 class="gallery-item__title">Lorem ipsum dolor.</h2>
+               <p class="gallery-item__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium labore nemo, architecto officia ipsum, delectus?</p>
+               <a href="" class="gallery-item__btn">Details</a>
+             </li>
+             <li class="gallery-item">
+               <img class="gallery-item__img" src="http://placehold.it/275x205" alt="gallery-image">
+               <h2 class="gallery-item__title">Lorem ipsum dolor.</h2>
+               <p class="gallery-item__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium labore nemo, architecto officia ipsum, delectus?</p>
+               <a href="" class="gallery-item__btn">Details</a>
+             </li>
+             <li class="gallery-item">
+               <img class="gallery-item__img" src="http://placehold.it/275x205" alt="gallery-image">
+               <h2 class="gallery-item__title">Lorem ipsum dolor.</h2>
+               <p class="gallery-item__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium labore nemo, architecto officia ipsum, delectus?</p>
+               <a href="" class="gallery-item__btn">Details</a>
+             </li>
+             <li class="gallery-item">
+               <img class="gallery-item__img" src="http://placehold.it/275x205" alt="gallery-image">
+               <h2 class="gallery-item__title">Lorem ipsum dolor.</h2>
+               <p class="gallery-item__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium labore nemo, architecto officia ipsum, delectus?</p>
+               <a href="" class="gallery-item__btn">Details</a>
+             </li>
+           </ul>
+         </div>
+       </section>
+       <section class="gallery-controls">
+           <a href="" class="gallery-controls__btn  gallery-controls__btn--prev">Prev</a>
+           <a href="" class="gallery-controls__btn">1</a>
+           <a href="" class="gallery-controls__btn">2</a>
+           <a href="" class="gallery-controls__btn">3</a>
+           <a href="" class="gallery-controls__btn  gallery-controls__btn--next">Next</a>
+       </section>
+     </section>
+     
+     <section class="clients">
+      <div class="inner">
+        <h3 class="clients__title">Clients</h3>
+         <ul>
+           <li><img src="" alt=""></li>
+           <li><img src="" alt=""></li>
+           <li><img src="" alt=""></li>
+           <li><img src="" alt=""></li>
+           <li><img src="" alt=""></li>
+           <li><img src="" alt=""></li>
+         </ul>
+      </div>
+     </section>
+     
+     
+     
+     
+     
+     <section class="testimonals">
         <div class="inner">
           <h2 class="testimonals__title">Testimonals</h2>
           <p class="testimonals__phrase">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam autem quia optio officia minus perferendis asperiores ad."</p>
@@ -177,8 +170,6 @@
       </section>
       
     </main>
-    
-    
     
     <footer> <!--===================================================================-->
      
@@ -253,8 +244,6 @@
       
     </footer>
     
-    
-<!--  <script src="js/jquery-2.1.4.min.js"></script>-->
   <script src="js/scripts.js"></script>
   </body>
   
