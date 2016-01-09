@@ -29,10 +29,13 @@
   border-bottom: 1px solid @border-portfolio-nav;
 }
 .gallery-nav > .inner {
+  max-width: 1020px;
   display: flex;
   flex-wrap: wrap;
   border-left: 1px solid @border-portfolio-nav;
   border-right: 1px solid @border-portfolio-nav;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 .gallery-nav__groups-list {
   display: flex;
@@ -190,21 +193,14 @@
     margin-bottom: 45px;
     padding: 25px;
     box-sizing: border-box;
-    background: red;
+    background: #c1c1c1;
     text-align: center;
     &__img {
       position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
-    }
-    &__title,
-    &__intro,
-    &__btn {
-      text-align: center;
-      position: relative;
-      z-index: 2;
-      color: white;
+      transition: 0.3s -webkit-filter;
     }
     &__title,
     &__btn {
@@ -228,7 +224,25 @@
       border-radius: 4px;
       background: url("/graph/img/portfolio-gallery-eye.png") no-repeat 15px center;
     }
+    &__title,
+    &__intro,
+    &__btn {
+      opacity: 0;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      color: white;
+      transition: opacity 0.6s;
+    }
   }
+}
+.gallery-item:hover .gallery-item__title,
+.gallery-item:hover .gallery-item__intro,
+.gallery-item:hover .gallery-item__btn {
+  opacity: 1;
+}
+.gallery-item:hover .gallery-item__img {
+  -webkit-filter: blur(5px);
 }
 
 .gallery-controls {
@@ -253,7 +267,26 @@
   }
 }
 
-
+.clients {
+  padding: 25px 0;
+  border-bottom: 1px solid @border-portfolio-nav;
+  &__title {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 27px; 
+    line-height: 40px;
+    color: @c-lightblue;
+    font-family: @ff-bebas;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
 
 
 
