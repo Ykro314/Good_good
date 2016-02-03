@@ -1,7 +1,8 @@
-/*====================================== About-content START =======================================*/
-body {
-  min-width: 410px;
+.Media-side-margins {
+  margin-right: 10px;
+  margin-left: 10px;
 }
+/*====================================== About-content START =======================================*/
 main {
   padding-bottom: 100px;
 }
@@ -96,13 +97,13 @@ main {
 }
 .team .team-card {
   position: relative;
-  z-index: 10;
-  background: #fff;
   width: 380px;
+  z-index: 10;
   margin-bottom: 50px;
   margin-right: 20px;
   margin-left: 20px;
   padding: 12px;
+  background: #fff;
   outline: 1px solid #cccccc;
   box-shadow: 10px -10px 0 0 #d3d3d3;
 }
@@ -110,6 +111,7 @@ main {
   position: absolute;
   top: 12px;
   left: 12px;
+  max-width: 100%;
 }
 .team .team-card .card--aside {
   margin-left: 140px;
@@ -175,14 +177,17 @@ main {
   }
 }
 @media (max-width: 850px) {
+  main {
+    padding-bottom: 50px;
+  }
   .features__list {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .features .features-item:nth-child(2) {
+  .features-item:nth-child(2) {
     border-right: 1px solid #dcdcdc;
   }
-  .features .features-item {
+  .features-item {
     width: 44%;
   }
 }
@@ -197,6 +202,30 @@ main {
   .features .features-item:nth-child(2),
   .features .features-item:last-child {
     border-right: none;
+  }
+}
+@media (max-width: 400px) {
+  .team .team-card,
+  .team .team-card:nth-child(odd) {
+    margin-right: 0;
+    margin-left: 0;
+    box-shadow: none;
+  }
+  .team .team-card .card__skills,
+  .team .team-card:nth-child(odd) .card__skills {
+    display: none;
+  }
+  .team .team-card img,
+  .team .team-card:nth-child(odd) img {
+    width: 115px;
+  }
+  .team .team-card .card__name,
+  .team .team-card:nth-child(odd) .card__name {
+    font-size: 25px;
+  }
+  .team .team-card img ~ .card--aside,
+  .team .team-card:nth-child(odd) img ~ .card--aside {
+    margin-bottom: 13px;
   }
 }
 /*====================================== Media for About-content END =======================================*/

@@ -1,3 +1,7 @@
+.Media-side-margins {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 /*====================================== Main-content START =======================================*/
 .page__slider .slide {
   padding-top: 110px;
@@ -141,8 +145,9 @@
 }
 .portfolio .portfolio-item {
   width: 280px;
-  margin-right: 20px;
   margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .portfolio .portfolio-item__img {
   width: 260px;
@@ -330,8 +335,9 @@
     justify-content: space-around;
   }
   .offer .offer-item {
-    margin-right: 20px;
     margin-bottom: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   .testimonals__phrase {
     width: 90%;
@@ -344,7 +350,10 @@
   }
   .services__list-item {
     margin-bottom: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    flex-basis: 45%;
+    flex-grow: 1;
   }
 }
 @media (max-width: 700px) {
@@ -374,10 +383,12 @@
     font-size: 20px;
   }
 }
-@media (max-width: 360px) {
-  .services__list-item {
-    margin-right: 0;
+@media (max-width: 465px) {
+  .offer-item {
+    flex-basis: 80%;
   }
+}
+@media (max-width: 360px) {
   .offer .offer-item {
     margin-right: 0;
   }

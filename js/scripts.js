@@ -52,7 +52,7 @@ btn.addEventListener( "click", function( event ) {
   }
   
   setTimeout( function() {
-    icon.classList.toggle( "active" )
+    icon.classList.toggle( "active" );
   }, 1000 );
   
 }, false ); 
@@ -65,21 +65,20 @@ var category_btn = document.querySelector( ".gallery-nav__category" );
 var category_list = document.querySelector( ".category-list" );
   
 category_btn.addEventListener( "click", function( event ) {
-  if( event.target == category_btn ) {
+  if( event.target == category_btn && window.innerWidth > 825 ) {
     category_list.classList.toggle( "category-list--active" );
     category_btn.classList.toggle( "gallery-nav__category--active" );
   }
-})
+});
 
 category_list.addEventListener( "click", function( event ) {
-  var target = event.target;
-  target.classList.toggle( "item-active" );
-})
+  event.target.classList.toggle( "item-active" );
+});
 
 
 
 /*========================= Portfolio gallery grid buttons ==========================*/
-var gallery_panel = document.querySelector( ".gallery-nav" )
+var gallery_panel = document.querySelector( ".gallery-nav" );
 var btn_square = document.querySelector( ".gallery-nav__grid-btn--square" );
 var btn_lines = document.querySelector( ".gallery-nav__grid-btn--lines" );
 var gallery = document.querySelector( ".gallery-container" );
@@ -100,7 +99,7 @@ gallery_panel.addEventListener( "click", function( event ) {
     gallery.classList.remove( "gallery-grid--square" );
   }
   
-})
+});
 
 /*============================  Textcontent slice onload  ==========================*/
 
@@ -114,6 +113,17 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
       gallery_content[i].textContent =  gallery_content[i].textContent.substr(0, 120) + "...";
     }
     
+  }
+  
+});
+
+/*============================Category list buttons ===========================*/
+var group_list = document.querySelector( ".gallery-nav__groups-list" );
+  
+group_list.addEventListener( "click", function( event ) {
+
+  if( event.target.tagName.toUpperCase() == "LI" ) {
+    event.target.classList.toggle( "groups-list__item--active" );
   }
   
 })

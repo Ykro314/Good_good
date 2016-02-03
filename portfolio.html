@@ -49,13 +49,14 @@
        <nav class="gallery-nav">
          <div class="inner">
            <ul class="gallery-nav__groups-list">
-             <li>All</li>
+             <li class="groups-list__item--active">All</li>
              <li>Web Design</li>
              <li>Advertising</li>
              <li>Identity</li>
-             <li>Illustation</li>
+             <li>Illustration</li>
            </ul>
            <div class="gallery-nav__category">Category
+             <span>:</span>
              <ul class="category-list">
                <li>Lorem.</li>
                <li>Eum.</li>
@@ -130,11 +131,11 @@
        </section>
        <section class="gallery-controls">
            <a href="" class="gallery-controls__btn  gallery-controls__btn--prev">Prev</a>
-           <a href="" class="gallery-controls__btn">1</a>
+           <a href="" class="gallery-controls__btn  gallery-controls--active">1</a>
            <a href="" class="gallery-controls__btn">2</a>
            <a href="" class="gallery-controls__btn">3</a>
            <a href="" class="gallery-controls__btn  gallery-controls__btn--next">Next</a>
-       </section>
+       </section> 
      </section>
      
      <section class="clients">
@@ -212,7 +213,7 @@
         <section class="column  column-newsletter">
           <h2>Newsletter</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod velit cumque earum molestias rem, provident, laudantium! Suscipit praesentium quod ipsa temporibus enim, iure soluta expedita esse, architecto incidunt excepturi dolores!</p>
-          <form action="post" class="newsletter__email">
+          <form action="post" name="newsletter" class="newsletter__email">
             <label for="email-field">Your email adress</label>
             <input type="email" name="email" id="email-field" required>
             <input type="submit" value="Sign up">

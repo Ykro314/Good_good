@@ -1,3 +1,7 @@
+.Media-side-margins {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 /*=================== Type START =====================================*/
 @font-face {
   font-family: BebasNeue;

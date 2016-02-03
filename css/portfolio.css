@@ -1,4 +1,11 @@
+.Media-side-margins {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 /*====================================== Portfolio-content START =======================================*/
+body {
+  min-width: 670px;
+}
 .page-banner {
   padding: 105px 0;
   background: url("/graph/pict/page-banner-all.jpg") repeat-x top center #2e363e;
@@ -30,7 +37,7 @@
   flex-wrap: wrap;
   border-left: 1px solid #b3d5e4;
   border-right: 1px solid #b3d5e4;
-  padding: 0 50px;
+  justify-content: center;
   box-sizing: border-box;
 }
 .gallery-nav__groups-list {
@@ -46,6 +53,10 @@
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Ubuntu", "Arial", sans-serif;
+  cursor: pointer;
+}
+.gallery-nav__groups-list .groups-list__item--active {
+  color: #2190c1;
 }
 .gallery-nav__groups-list li:after {
   position: absolute;
@@ -67,6 +78,20 @@
   cursor: pointer;
   transition: 0.5s all;
 }
+.gallery-nav__category span {
+  display: none;
+}
+/*.gallery-nav__category:hover{
+  color: @border-portfolio-nav;
+}
+.gallery-nav__category:hover:after{
+  background: @border-portfolio-nav;
+}
+.gallery-nav__category:hover:before {
+  border-color: @border-portfolio-nav;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}*/
 .gallery-nav__category--active {
   background: #2190c1;
   color: white;
@@ -82,6 +107,7 @@
   border-left-color: transparent;
   border-top-color: transparent;
   transform: rotate(45deg);
+  transition: all 0.3s;
 }
 .gallery-nav__category:after {
   content: "";
@@ -91,6 +117,7 @@
   width: 3px;
   height: 8px;
   background: #515862;
+  transition: all 0.3s;
 }
 .gallery-nav__category--active:after {
   background: white;
@@ -136,6 +163,16 @@
   border-radius: 50%;
   background: #f9f5d2;
 }
+.category-list li:before {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: -4px;
+  content: "";
+  width: 1px;
+  height: 25px;
+  background: #c3c4c4;
+}
 .category-list .item-active:after {
   background: #2190c1;
 }
@@ -150,6 +187,7 @@
   margin-left: 10px;
   margin-right: 10px;
   align-self: center;
+  cursor: pointer;
 }
 .gallery-nav__grid-btn--lines {
   background: url("/graph/img/portfolio-gallery-btn-line.png") no-repeat center;
@@ -285,11 +323,27 @@
   color: white;
   margin-right: 8px;
   border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.gallery-controls .gallery-controls--active {
+  background-color: #2190c1;
+  color: #c5f0ff;
+}
+.gallery-controls__btn:hover {
+  background-color: #0080b7;
 }
 .gallery-controls__btn--prev,
 .gallery-controls__btn--next {
-  background: #2190c1;
+  color: #c5f0ff;
   font-size: 15px;
+}
+.gallery-controls__btn--prev {
+  padding-left: 30px;
+  background: url("/graph/img/portfolio-gallery-prev-icon.png") no-repeat left 13px center #2190c1;
+}
+.gallery-controls__btn--next {
+  padding-right: 30px;
+  background: url("/graph/img/portfolio-gallery-next-icon.png") no-repeat right 13px center #2190c1;
 }
 .clients {
   padding: 25px 0;
@@ -419,3 +473,110 @@
 /*=======================*/
 /*=======================*/
 /*====================================== Media for Portfolio-content START =======================================*/
+@media (max-width: 1050px) {
+  .gallery-nav .inner {
+    justify-content: center;
+  }
+  .gallery-nav__groups-list li {
+    font-size: 14px;
+    padding: 0 18px;
+  }
+  .gallery-nav__category {
+    font-size: 17px;
+  }
+}
+@media (max-width: 900px) {
+  .gallery-nav .inner {
+    padding: 0 10px;
+    justify-content: center;
+    border: none;
+  }
+  .gallery-grid--square ul {
+    justify-content: center;
+  }
+  .gallery-grid--square .gallery-item {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .gallery-grid--square .gallery-item:last-child {
+    display: none;
+  }
+  .testimonals__phrase {
+    width: 90%;
+    font-size: 20px;
+  }
+}
+@media (max-width: 825px) {
+  .gallery-nav .inner {
+    padding-top: 20px;
+  }
+  .gallery-nav__category:after,
+  .gallery-nav__category:before {
+    display: none;
+  }
+  .gallery-nav__category {
+    display: flex;
+    padding: 17px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 0;
+    flex-grow: 2;
+    font-weight: 500;
+  }
+  .gallery-nav__category span {
+    display: block;
+  }
+  .gallery-nav__category .category-list {
+    position: static;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+    width: 70%;
+    padding: 0;
+    background: #fff;
+    max-height: none;
+    opacity: 1;
+  }
+  .gallery-nav__category li {
+    padding: 0 20px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    border-bottom: none;
+    color: #515862;
+  }
+  .gallery-nav__category .item-active {
+    color: #2190c1;
+  }
+  .gallery-nav__category li:first-child {
+    padding-left: 30px;
+  }
+  .gallery-nav__category li:last-child:before {
+    display: none;
+  }
+  .gallery-nav__category li:after {
+    display: none;
+  }
+  .gallery-nav__category li:before {
+    display: block;
+  }
+  .gallery-nav__groups-list {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccece;
+  }
+}
+@media (max-width: 750px) {
+  .gallery__title {
+    margin-bottom: 30px;
+    font-size: 60px;
+  }
+  .clients {
+    display: none;
+  }
+}
+/*======================  Media for portfolio-content END  ================================*/
+/*===========================*/
+/*===========================*/

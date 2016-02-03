@@ -11,15 +11,18 @@
 }  
 
 @media (max-width: 850px) {
+  main {
+    padding-bottom: 50px;
+  }
   .features {
     &__list {
       flex-wrap: wrap;
       justify-content: space-around;
     }
-    .features-item:nth-child(2) {
+    &-item:nth-child(2) {
       border-right: 1px solid #dcdcdc;
     }
-    .features-item {
+    &-item {
       width: 44%;
     }
   }
@@ -39,10 +42,32 @@
     .features-item:nth-child(2),
     .features-item:last-child{
       border-right: none;
-    } 
+    }
   }
 }
 
+@media (max-width: 400px) {
+  .team {
+    .team-card,
+    .team-card:nth-child(odd){
+      margin-right: 0;
+      margin-left: 0;
+      box-shadow: none;
+      .card__skills {
+        display: none;
+      }
+      img {
+        width: 115px;
+      }
+      .card__name {
+        font-size: 25px;
+      }
+      img ~.card--aside {
+        margin-bottom: 13px;
+      }
+    }
+  }
+}
 /*====================================== Media for About-content END =======================================*/
 /*=========================*/
 /*=========================*/

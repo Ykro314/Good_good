@@ -6,8 +6,8 @@
       justify-content: space-around;
     }
     .offer-item {
-      margin-right: 20px;
       margin-bottom: 40px;
+      .Media-side-margins();
     }
   }
   .testimonals {
@@ -25,7 +25,9 @@
     }
     &__list-item {
       margin-bottom: 20px;
-      margin-right: 20px;
+      .Media-side-margins();
+      flex-basis: 45%;
+      flex-grow: 1;
     }
   }
 }
@@ -68,11 +70,17 @@
     }
   }
 }
-
+@media (max-width: 465px) {
+  .offer {
+    &-item {
+      flex-basis: 80%;
+    }
+  }
+}
 @media (max-width: 360px) {
   .services {
     &__list-item {
-      margin-right: 0;
+//      margin-right: 0;
     }
   }
   .offer {

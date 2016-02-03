@@ -1,4 +1,7 @@
 /*====================================== Portfolio-content START =======================================*/
+body {
+  min-width: 670px;
+}
 
 .page-banner {
   padding: 105px 0;
@@ -34,7 +37,7 @@
   flex-wrap: wrap;
   border-left: 1px solid @border-portfolio-nav;
   border-right: 1px solid @border-portfolio-nav;
-  padding: 0 50px;
+  justify-content: center;
   box-sizing: border-box;
 }
 .gallery-nav__groups-list {
@@ -49,6 +52,10 @@
     font-size: 16px;
     text-transform: uppercase;
     font-family: @ff-ubuntu;
+    cursor: pointer;
+  }
+  .groups-list__item--active {
+    color: @c-lightblue;
   }
   li:after {
     position: absolute;
@@ -66,6 +73,7 @@
 }
 
 
+
 .gallery-nav__category {
   position: relative;
   padding: 20px 50px 20px 20px;
@@ -73,11 +81,21 @@
   text-transform: uppercase;
   cursor: pointer;  
   transition: 0.5s all;
+  span {
+    display: none;
+  }
 }
-//.gallery-nav__category:hover .category-list {
-//  max-height: 200px;
-//  opacity: 1;
-//}
+/*.gallery-nav__category:hover{
+  color: @border-portfolio-nav;
+}
+.gallery-nav__category:hover:after{
+  background: @border-portfolio-nav;
+}
+.gallery-nav__category:hover:before {
+  border-color: @border-portfolio-nav;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}*/
 .gallery-nav__category--active {
   background: @c-lightblue;
   color: white;
@@ -93,6 +111,7 @@
   border-left-color: transparent;
   border-top-color: transparent;
   transform: rotate(45deg);
+  transition: all 0.3s;
 }
 .gallery-nav__category:after {
   content: "";
@@ -102,6 +121,7 @@
   width: 3px;
   height: 8px;
   background: @color-body;
+  transition: all 0.3s;
 }
 .gallery-nav__category--active:after{
   background: white;
@@ -149,6 +169,17 @@
     border-radius: 50%;
     background: #f9f5d2;
   }
+  li:before {
+    display: none;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -4px;
+    content: "";
+    width: 1px;
+    height: 25px;
+    background: #c3c4c4;
+  }
   .item-active:after {
     background: @c-lightblue;
   }
@@ -165,6 +196,7 @@
   margin-left: 10px;
   margin-right: 10px;
   align-self: center;
+  cursor: pointer;
 }
 .gallery-nav__grid-btn--lines {
   background: url("/graph/img/portfolio-gallery-btn-line.png") no-repeat center;
@@ -310,11 +342,27 @@
     color: white;
     margin-right: 8px;
     border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  .gallery-controls--active {
+    background-color: @c-lightblue;
+    color: @c-gallery-control--active;
+  }
+  &__btn:hover {
+    background-color: @c-darkblue;
   }
   &__btn--prev,
   &__btn--next {
-    background: @c-lightblue;
+    color: @c-gallery-control--active;
     font-size: 15px;
+  } 
+  &__btn--prev {
+    padding-left: 30px;  
+    background: url("/graph/img/portfolio-gallery-prev-icon.png") no-repeat left 13px center @c-lightblue;
+  }
+  &__btn--next {
+    padding-right: 30px;
+    background: url("/graph/img/portfolio-gallery-next-icon.png") no-repeat right 13px center @c-lightblue;
   }
 }
 
