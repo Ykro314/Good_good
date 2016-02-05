@@ -56,7 +56,7 @@ body {
 }
 .gallery-nav__groups-list li {
   -ms-flex-item-align: center;
-          -webkit-align-self: center;
+      -webkit-align-self: center;
           align-self: center;
   position: relative;
   padding: 0 25px;
@@ -111,8 +111,8 @@ body {
   position: absolute;
   top: 40%;
   right: 15%;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border: 6px solid #515862;
   border-left-color: transparent;
   border-top-color: transparent;
@@ -142,7 +142,7 @@ body {
   top: 100%;
   left: 0;
   z-index: -1;
-  max-height: 0px;
+  max-height: 0;
   width: 100%;
   padding: 8px 12px;
   margin: 0;
@@ -198,7 +198,7 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   -ms-flex-item-align: center;
-          -webkit-align-self: center;
+      -webkit-align-self: center;
           align-self: center;
   cursor: pointer;
 }
@@ -444,6 +444,26 @@ body {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
+.testimonals__block .coin:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border: 2px solid #f88560;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.65, 0.12, 0.42, 2.25);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.testimonals__block .coin:hover:before {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .testimonals__block .front,
 .testimonals__block .back {
   position: absolute;
@@ -480,7 +500,7 @@ body {
   top: 0;
   left: 10px;
   text-align: center;
-  background: #fff;
+  background: #ffffff;
   opacity: 0;
   color: #f88560;
   transition: 0.5s all;
@@ -587,7 +607,7 @@ body {
             flex-grow: 2;
     width: 70%;
     padding: 0;
-    background: #fff;
+    background: #ffffff;
     max-height: none;
     opacity: 1;
   }

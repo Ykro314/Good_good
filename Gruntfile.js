@@ -125,7 +125,6 @@ module.exports = function(grunt) {
     
   
   grunt.registerTask("stage", [
-    "csscomb",
     "autoprefixer",
     "replace:stage_css",
     "replace:stage_html",
@@ -133,7 +132,6 @@ module.exports = function(grunt) {
   ]);
   
   grunt.registerTask("build", [
-    "csscomb",
     "autoprefixer",
     "imagemin",
     "cssmin",
