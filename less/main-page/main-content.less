@@ -1,5 +1,5 @@
 /*====================================== Main-content START =======================================*/
-.page__slider { 
+.page__slider {
   .slide {
     padding-top: 110px;
     box-sizing: border-box;
@@ -19,21 +19,61 @@
       font-size: 14px;
     }
     .slider__btn {
+      position: relative;
       display: block;
       width: 250px;
       margin: 0 auto;
-      background: @c-orange;
+      padding: 13px 0;
       color: #ffebca;
       font-size: 25px;
       font-family: @ff-ubuntu;
       text-transform: uppercase;
-      padding: 13px 0;
       border-radius: 5px;
+      background: @c-orange;
       transition: all 0.3s;
+      span {
+        position: relative;
+        z-index: 10;
+      }
     }
-    .slider__btn:hover {
-      background: darken((@c-orange), 7%);
+    .slider__btn:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      content: "";
+      border: 2px solid #f98561;
+      border-radius: 5px;
+      background: transparent;
+      transition: all 0.3s cubic-bezier( 0.65, 0.12, 0.42, 2.25 );
+      transform: scale(1);
     }
+    .slider__btn:hover:before {
+      transform: scaleX(1.05) scaleY(1.20);
+    }
+    /*
+    .circle {
+      width: 2px;
+      height: 2px;
+      background: darken(#f98561, 8%);
+      background: rgba(248, 103, 58, 0.5);
+      position: absolute;
+      border-radius: 50%;
+      transition: all 0.3s;
+      z-index: 2;
+    }
+    .transform {
+      animation: scale 0.5s ease-in-out;
+    }
+    
+    @keyframes scale {
+      100% {
+        transform: scale(300);
+      }
+    }*/
   }
   .controls-wrap {
     position: relative;
@@ -201,7 +241,7 @@
   }
   .offer-item__title {
     margin-bottom: 10px;
-    color: @c-lightblue; 
+    color: @c-lightblue;
   }
   &__btn {
     position: absolute;
@@ -225,11 +265,11 @@
 
 .testimonals {
   padding-top: 30px;
-//  padding-bottom: 200px; /*місце для майбутнього слайдера, я його ше не продумав*/
+  //  padding-bottom: 200px; /*місце для майбутнього слайдера, я його ше не продумав*/
   &__title {
     margin-bottom: 30px;
     text-align: center;
-    font-size: 27px; 
+    font-size: 27px;
     line-height: 40px;
     color: @c-lightblue;
   }
@@ -257,7 +297,7 @@
   .element {
     width: 67px;
     border-bottom: 6px solid #c1c1c1;
-    transition: all 0.8s; 
+    transition: all 0.8s;
     perspective: 500px;
     cursor: pointer;
   }
@@ -267,10 +307,11 @@
     height: 67px;
     margin-bottom: 15px;
     border-radius: 50%;
-    transition: all 0.6s; 
+    transition: all 0.6s;
     transform-style: preserve-3d;
   }
-  .front, .back{
+  .front,
+  .back {
     position: absolute;
     top: 0;
     left: 0;
@@ -283,11 +324,11 @@
     backface-visibility: hidden;
   }
   .male .front {
-    background: url("../graph/img/main-testimonals-icon-male.png") no-repeat bottom center @c-gray-testimonals; 
+    background: url("../graph/img/main-testimonals-icon-male.png") no-repeat bottom center @c-gray-testimonals;
   }
   .female .front {
     background: url("../graph/img/main-testimonals-icon-female.png") no-repeat bottom center @c-gray-testimonals;
-  } 
+  }
   .back {
     background: @c-orange-testimonals;
     transform: rotateY(180deg);
@@ -300,12 +341,12 @@
   }
   .name {
     position: absolute;
-//    min-height: 40px;
+    //    min-height: 40px;
     top: 0;
-    left: 10px;  
+    left: 10px;
     text-align: center;
-    background: #fff;
-//    border: 1px solid red;
+    background: #ffffff;
+    //    border: 1px solid red;
     opacity: 0;
     color: #f88560;
     transition: 0.5s all;

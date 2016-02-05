@@ -8,7 +8,7 @@ body {
 }
 .page-banner {
   padding: 105px 0;
-  background: url("/graph/pict/page-banner-all.jpg") repeat-x top center #2e363e;
+  background: url("../graph/pict/page-banner-all.jpg") repeat-x top center #2e363e;
 }
 .page-banner__title {
   font-size: 80px;
@@ -33,21 +33,31 @@ body {
 }
 .gallery-nav > .inner {
   max-width: 1020px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   border-left: 1px solid #b3d5e4;
   border-right: 1px solid #b3d5e4;
-  justify-content: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   box-sizing: border-box;
 }
 .gallery-nav__groups-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .gallery-nav__groups-list li {
-  align-self: center;
+  -ms-flex-item-align: center;
+          -webkit-align-self: center;
+          align-self: center;
   position: relative;
   padding: 0 25px;
   font-size: 16px;
@@ -106,7 +116,8 @@ body {
   border: 6px solid #515862;
   border-left-color: transparent;
   border-top-color: transparent;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   transition: all 0.3s;
 }
 .gallery-nav__category:after {
@@ -186,20 +197,22 @@ body {
   height: 25px;
   margin-left: 10px;
   margin-right: 10px;
-  align-self: center;
+  -ms-flex-item-align: center;
+          -webkit-align-self: center;
+          align-self: center;
   cursor: pointer;
 }
 .gallery-nav__grid-btn--lines {
-  background: url("/graph/img/portfolio-gallery-btn-line.png") no-repeat center;
+  background: url("../graph/img/portfolio-gallery-btn-line.png") no-repeat center;
 }
 .gallery-nav__grid-btn--square {
-  background: url("/graph/img/portfolio-gallery-btn-square.png") no-repeat center;
+  background: url("../graph/img/portfolio-gallery-btn-square.png") no-repeat center;
 }
 .square-active {
-  background: url("/graph/img/portfolio-gallery-btn-square--active.png") no-repeat center;
+  background: url("../graph/img/portfolio-gallery-btn-square--active.png") no-repeat center;
 }
 .lines-active {
-  background: url("/graph/img/portfolio-gallery-btn-line--active.png") no-repeat center;
+  background: url("../graph/img/portfolio-gallery-btn-line--active.png") no-repeat center;
 }
 .gallery-container .inner {
   padding-top: 45px;
@@ -211,9 +224,15 @@ body {
   padding: 0;
 }
 .gallery-grid--square ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .gallery-grid--square .gallery-item {
   position: relative;
@@ -252,7 +271,7 @@ body {
   font-size: 17px;
   border: 1px solid white;
   border-radius: 4px;
-  background: url("/graph/img/portfolio-gallery-eye.png") no-repeat 15px center;
+  background: url("../graph/img/portfolio-gallery-eye.png") no-repeat 15px center;
 }
 .gallery-grid--square .gallery-item__title,
 .gallery-grid--square .gallery-item__intro,
@@ -304,15 +323,19 @@ body {
   font-size: 19px;
   border: 1px solid #b3d5e4;
   border-radius: 4px;
-  background: url("/graph/img/portfolio-gallery-eye.png") no-repeat 15px center rgba(193, 193, 193, 0.5);
+  background: url("../graph/img/portfolio-gallery-eye.png") no-repeat 15px center rgba(193, 193, 193, 0.5);
   color: #2190c1;
   box-shadow: 2px 2px 3px 0 grey;
 }
 .gallery-controls {
   width: 500px;
   margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .gallery-controls__btn {
   display: block;
@@ -339,11 +362,11 @@ body {
 }
 .gallery-controls__btn--prev {
   padding-left: 30px;
-  background: url("/graph/img/portfolio-gallery-prev-icon.png") no-repeat left 13px center #2190c1;
+  background: url("../graph/img/portfolio-gallery-prev-icon.png") no-repeat left 13px center #2190c1;
 }
 .gallery-controls__btn--next {
   padding-right: 30px;
-  background: url("/graph/img/portfolio-gallery-next-icon.png") no-repeat right 13px center #2190c1;
+  background: url("../graph/img/portfolio-gallery-next-icon.png") no-repeat right 13px center #2190c1;
 }
 .clients {
   padding: 25px 0;
@@ -359,8 +382,12 @@ body {
   font-family: BebasNeue, "Arial", sans-serif;
 }
 .clients__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -392,14 +419,19 @@ body {
   padding-top: 50px;
   margin: 0 auto;
   width: 210px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .testimonals__block .element {
   width: 67px;
   border-bottom: 6px solid #c1c1c1;
   transition: all 0.8s;
-  perspective: 500px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
   cursor: pointer;
 }
 .testimonals__block .coin {
@@ -409,7 +441,8 @@ body {
   margin-bottom: 15px;
   border-radius: 50%;
   transition: all 0.6s;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 .testimonals__block .front,
 .testimonals__block .back {
@@ -422,7 +455,8 @@ body {
   border-radius: 50%;
   background-color: #c1c1c1;
   text-align: center;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 .testimonals__block .male .front {
   background: url("../graph/img/main-testimonals-icon-male.png") no-repeat bottom center #c1c1c1;
@@ -432,7 +466,8 @@ body {
 }
 .testimonals__block .back {
   background: #f88560;
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .testimonals__block .male .back {
   background: url("../graph/img/main-testimonals-icon-male.png") no-repeat bottom center #f88560;
@@ -454,7 +489,8 @@ body {
   opacity: 1;
 }
 .testimonals__block .active .coin {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .testimonals__block .active {
   border-bottom-color: #f88560;
@@ -466,7 +502,8 @@ body {
   left: 45%;
   width: 8px;
   height: 8px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   background: #f88560;
 }
 /*====================================== Portfolio-content END =======================================*/
@@ -475,7 +512,9 @@ body {
 /*====================================== Media for Portfolio-content START =======================================*/
 @media (max-width: 1050px) {
   .gallery-nav .inner {
-    justify-content: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .gallery-nav__groups-list li {
     font-size: 14px;
@@ -488,11 +527,15 @@ body {
 @media (max-width: 900px) {
   .gallery-nav .inner {
     padding: 0 10px;
-    justify-content: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: none;
   }
   .gallery-grid--square ul {
-    justify-content: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .gallery-grid--square .gallery-item {
     margin-left: 20px;
@@ -515,12 +558,16 @@ body {
     display: none;
   }
   .gallery-nav__category {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     padding: 17px;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 0;
-    flex-grow: 2;
+    -webkit-flex-grow: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     font-weight: 500;
   }
   .gallery-nav__category span {
@@ -529,9 +576,15 @@ body {
   .gallery-nav__category .category-list {
     position: static;
     z-index: 10;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-grow: 2;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-grow: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     width: 70%;
     padding: 0;
     background: #fff;
@@ -563,7 +616,9 @@ body {
   }
   .gallery-nav__groups-list {
     width: 100%;
-    justify-content: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-bottom: 20px;
     border-bottom: 1px solid #cccece;
   }

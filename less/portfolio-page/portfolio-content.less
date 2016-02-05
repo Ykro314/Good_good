@@ -10,7 +10,7 @@ body {
     font-size: 80px;
     text-align: center;
     color: @c-lightgrey-banner;
-  }  
+  }
 }   
 
 .gallery {
@@ -23,7 +23,7 @@ body {
     line-height: 80px;
     text-align: center;
     color: @c-lightblue;
-  }  
+  }
 }
 
 
@@ -57,19 +57,19 @@ body {
   .groups-list__item--active {
     color: @c-lightblue;
   }
-  li:after {
+  li: after {
     position: absolute;
     right: 0;
-//    top: calc( 50% - 20px );
+    //    top: calc( 50% - 20px );
     top: -4px;
     content: "";
     width: 1px;
     height: 25px;
     background: #c3c4c4;
   }
-  li:last-child:after {
-    display: none;
-  }
+    li:last-child:after {
+      display: none;
+    }
 }
 
 
@@ -79,7 +79,7 @@ body {
   padding: 20px 50px 20px 20px;
   font-size: 20px;
   text-transform: uppercase;
-  cursor: pointer;  
+  cursor: pointer;
   transition: 0.5s all;
   span {
     display: none;
@@ -100,13 +100,13 @@ body {
   background: @c-lightblue;
   color: white;
 }
-.gallery-nav__category:before { 
+.gallery-nav__category:before {
   content: "";
   position: absolute;
   top: 40%;
   right: 15%;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border: 6px solid @color-body;
   border-left-color: transparent;
   border-top-color: transparent;
@@ -123,28 +123,28 @@ body {
   background: @color-body;
   transition: all 0.3s;
 }
-.gallery-nav__category--active:after{
+.gallery-nav__category--active:after {
   background: white;
 }
-.gallery-nav__category--active:before{
+.gallery-nav__category--active:before {
   border-right-color: white;
   border-bottom-color: white;
 }
 
 
-.category-list { 
+.category-list {
   position: absolute;
   top: 100%;
   left: 0;
   z-index: -1;
-  max-height: 0px;
+  max-height: 0;
   width: 100%;
   padding: 8px 12px;
   margin: 0;
   box-sizing: border-box;
   opacity: 0;
   transition: 0.5s all;
-//  border: 1px solid red;
+  //  border: 1px solid red;
   list-style: none;
   background: @c-orange;
   li {
@@ -156,33 +156,33 @@ body {
     line-height: 30px;
     border-bottom: 1px solid #f9af8c;
   }
-  li:last-child {
+  li: last-child {
     border-bottom: none;
   }
-  li:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 35%;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #f9f5d2;
-  }
-  li:before {
-    display: none;
-    content: "";
-    position: absolute;
-    right: 0;
-    top: -4px;
-    content: "";
-    width: 1px;
-    height: 25px;
-    background: #c3c4c4;
-  }
-  .item-active:after {
-    background: @c-lightblue;
-  }
+    li:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 35%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #f9f5d2;
+    }
+      li:before {
+        display: none;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -4px;
+        content: "";
+        width: 1px;
+        height: 25px;
+        background: #c3c4c4;
+      }
+        .item-active:after {
+          background: @c-lightblue;
+        }
 } 
 .category-list--active {
   z-index: 10;
@@ -355,9 +355,9 @@ body {
   &__btn--next {
     color: @c-gallery-control--active;
     font-size: 15px;
-  } 
+  }
   &__btn--prev {
-    padding-left: 30px;  
+    padding-left: 30px;
     background: url("/graph/img/portfolio-gallery-prev-icon.png") no-repeat left 13px center @c-lightblue;
   }
   &__btn--next {
@@ -373,7 +373,7 @@ body {
     margin-bottom: 30px;
     text-transform: uppercase;
     text-align: center;
-    font-size: 27px; 
+    font-size: 27px;
     line-height: 40px;
     color: @c-lightblue;
     font-family: @ff-bebas;
@@ -391,11 +391,11 @@ body {
 
 .testimonals {
   padding-top: 30px;
-//  padding-bottom: 200px; /*місце для майбутнього слайдера, я його ше не продумав*/
+  //  padding-bottom: 200px; /*місце для майбутнього слайдера, я його ше не продумав*/
   &__title {
     margin-bottom: 30px;
     text-align: center;
-    font-size: 27px; 
+    font-size: 27px;
     line-height: 40px;
     color: @c-lightblue;
   }
@@ -423,7 +423,7 @@ body {
   .element {
     width: 67px;
     border-bottom: 6px solid #c1c1c1;
-    transition: all 0.8s; 
+    transition: all 0.8s;
     perspective: 500px;
     cursor: pointer;
   }
@@ -433,10 +433,11 @@ body {
     height: 67px;
     margin-bottom: 15px;
     border-radius: 50%;
-    transition: all 0.6s; 
+    transition: all 0.6s;
     transform-style: preserve-3d;
   }
-  .front, .back{
+  .front,
+  .back {
     position: absolute;
     top: 0;
     left: 0;
@@ -449,11 +450,11 @@ body {
     backface-visibility: hidden;
   }
   .male .front {
-    background: url("../graph/img/main-testimonals-icon-male.png") no-repeat bottom center @c-gray-testimonals; 
+    background: url("../graph/img/main-testimonals-icon-male.png") no-repeat bottom center @c-gray-testimonals;
   }
   .female .front {
     background: url("../graph/img/main-testimonals-icon-female.png") no-repeat bottom center @c-gray-testimonals;
-  } 
+  }
   .back {
     background: @c-orange-testimonals;
     transform: rotateY(180deg);
@@ -466,12 +467,12 @@ body {
   }
   .name {
     position: absolute;
-//    min-height: 40px;
+    //    min-height: 40px;
     top: 0;
-    left: 10px;  
+    left: 10px;
     text-align: center;
-    background: #fff;
-//    border: 1px solid red;
+    background: #ffffff;
+    //    border: 1px solid red;
     opacity: 0;
     color: #f88560;
     transition: 0.5s all;

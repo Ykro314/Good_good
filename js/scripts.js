@@ -30,34 +30,76 @@ for( var i = 0; i < element.length; i++ ) {
     showPhrase();
   }, false );
 };
+/*================================= Ripple effect button =============================*/
   
+var rippleClickBtn = document.querySelector( ".slider__btn" );
+  
+rippleClickBtn.addEventListener( "click", addRippleEffect);
+
+function addRippleEffect( event ) {
+  event.preventDefault();
+  var btn = event.target;
+  
+  while( btn.tagName.toLowerCase() !== "a") {
+    btn = btn.parentElement;
+  };
+  
+  var coords = btn.getBoundingClientRect();
+  
+  if( btn.lastElementChild.classList.contains( "circle" ) ) {
+    btn.removeChild( btn.lastElementChild )
+    var circle = createCircle( btn, coords, event );
+    
+    circle.addEventListener("animationend", function( event ) {
+      btn.removeChild( circle );
+    });
+  }
+  else {
+    var circle = createCircle( btn, coords, event );
+    
+    circle.addEventListener("animationend", function( event ) {
+      btn.removeChild( circle );
+    });
+  }
+  
+  function createCircle ( elem, coords, event ) {
+  var circle = document.createElement( "div" );
+  
+  circle.classList.add( "circle" );
+  circle.style.top = event.clientY - coords.top + "px";
+  circle.style.left = event.clientX - coords.left + "px";
+  elem.appendChild( circle );
+  circle.classList.add( 'transform' );
+  
+  return circle;
+  }
+}
   
 /*========================  Mobile navigation slide over  ===========================*/
   
-var btn = document.querySelector( ".page-header__open-btn" );
+var menu_btn = document.querySelector( ".page-header__open-btn-wrapper" );
 var menu = document.querySelector( ".page-header__main-navigation" );
-var icon = btn.firstElementChild;
   
-btn.addEventListener( "click", function( event ) {
-  menu.classList.toggle( "page-header__main-navigation--translated" );
+menu_btn.addEventListener( "click", function() {
+  var menu_icon = menu_btn.querySelector( ".open-btn" );
+  var elems = menu.children
   
-  if( btn.classList.contains( "page-header__open-btn--animation" ) ) {
-    btn.classList.toggle( "page-header__open-btn--animation-2" );
-  }
-  else if (  btn.classList.contains( "page-header__open-btn--animation-2") ) {
-    btn.classList.toggle( "page-header__open-btn--animation" );
-  }
-  else {
-    btn.classList.add( "page-header__open-btn--animation" );
-  }
+  menu_icon.classList.toggle( "open-btn--active" );
+  timeOut( elems, 0 );
+});
   
-  setTimeout( function() {
-    icon.classList.toggle( "active" );
-  }, 1000 );
+function timeOut( arr, i ) {
   
-}, false ); 
+  setTimeout(function(){
+    arr[i].classList.toggle( "page-header__navigation-item--view" );
+    
+    if( i !== arr.length ) {
+      timeOut( arr, i + 1 );
+    }
+    
+  },200 );
   
-  
+};
   
 /*========================== Category button-list ===============================*/
   
@@ -133,6 +175,48 @@ group_list.addEventListener( "click", function( event ) {
 
 
 
+
+
+
+
+
+
+
+
+
+/*var btn = document.querySelector( ".page-header__open-btn" );
+var menu = document.querySelector( ".page-header__main-navigation" );
+var icon = btn.firstElementChild;
+  
+btn.addEventListener( "click", function( event ) {
+  menu.classList.toggle( "page-header__main-navigation--translated" );
+  
+  if( btn.classList.contains( "page-header__open-btn--animation" ) ) {
+    btn.classList.toggle( "page-header__open-btn--animation-2" );
+  }
+  else if (  btn.classList.contains( "page-header__open-btn--animation-2") ) {
+    btn.classList.toggle( "page-header__open-btn--animation" );
+  }
+  else {
+    btn.classList.add( "page-header__open-btn--animation" );
+  }
+  
+  setTimeout( function() {
+    icon.classList.toggle( "active" );
+  }, 1000 );
+  
+}, false ); */
+
+
+
+
+
+
+
+
+
+
+
 /*
 
 function addClickListener(btn, text) {
@@ -145,16 +229,6 @@ addClickListener( document.querySelector( ".page-header__search" ), "123123123" 
 addClickListener( document.querySelector( ".page-banner__title" ), "asdasdasda" );
 
 */
-
-
-
-
-
-
-
-
-
-
 
 
 

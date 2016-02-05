@@ -20,76 +20,86 @@
 
 @media (max-width: 450px) {
   .page-header {
-     &__menu > .inner {
+    &__menu > .inner {
       padding-bottom: 80px;
       position: relative;
     }
     &__main-navigation {
       position: absolute;
       z-index: 10;
-      top: 70px;
-      left: 0;
+      top: 65px;
+      left: 100%;
       flex-wrap: wrap;
-      transform: translate(-100%);
       background: white;
-      transition: all 0.5s ease-in-out;
-      transition-delay: 0.90s;
-    }
-    &__main-navigation--translated {
-      transform: translate(0);
     }
     &__navigation-item {
       text-align: center;
       width: 100%;
+      transform: translate(0);
+      a {
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+    }
+    &__navigation-item:not(.item-blog) {
+      border-top: 1px solid lightblue;
+    }
+    &__navigation-item--view {
+      transform: translate(-100%);
     }
     .selected-item:after {
       left: 49%;
+      bottom: 6px;
+    }
+    .selected-item:before {
+      height: 10px;
     }
     .item-blog {
+      justify-content: center;
       margin-top: 15px;
       margin-bottom: 20px;
-      justify-content: center;
+      background: transparent;
     }
-    &__open-btn {
-//      order: 3;
-      display: flex;
+    &__navigation-item:hover {
+      box-shadow: inset 500px 0 0 0 #12a3d6;
+    }
+
+    &__open-btn-wrapper {
       position: absolute;
-      top: 85px;
+      top: 80px;
       right: 10px;
-      transform: translateX(0);
+      display: flex;
+      .open-btn {
+        transition: all 0.3s;
+        background: @color-body;
+      }
+      .open-btn:after,
+      .open-btn:before {
+        transform: rotate(0);
+        transition: all 0.3s ease-in;
+      }
     }
-    &__open-btn--animation {
-      animation-name: btn-translate;
-      animation-duration: 2.5s;
-      animation-timing-function: ease-in-out;
+    .open-btn--active {
+      background: transparent;
     }
-    &__open-btn--animation-2 {
-      animation-name: btn-translate-2;
-      animation-duration: 3.5s;
-      animation-timing-function: ease-in-out;
+    .open-btn--active:before {
+      transform-origin: left;
+      transform: rotate( 45deg );
     }
-    .active:after {
-      opacity: 0;
+    .open-btn--active:after {
+      transform-origin: left;
+      transform: rotate( -45deg );
     }
-    .active:before {
-      transform: rotate(90deg) translateX(-10px) translateY(5px);
-    }
-    .active {
-      transform: rotate(45deg);
-    }
-    &__navigation-item:hover{
-//    background: #12a3d6;
-    box-shadow: inset 500px 0 0 0 #12a3d6; 
-  }
   }
 }
+
 /*=================== Media for header END =====================================*/
 /*====================*/
 /*====================*/
 
 
 /*================================== Media for Footer START ====================================================================================*/
-@media (max-width: 950px){
+@media (max-width: 950px) {
   footer {
     .inner {
       justify-content: space-around;
@@ -107,7 +117,7 @@
 @media (max-width: 870px) {
   footer {
     .inner {
-      justify-content:flex-start;
+      justify-content: flex-start;
     }
   }
   .column-newsletter {
@@ -141,35 +151,6 @@
 }
 
 
-@keyframes btn-translate {
-  10% {
-    transform: scale(0.6);
-  }
-  30% {
-    transform: scale(1);
-  }
-  50%{
-    transform: translateX(100px);
-  }
-  100%{
-    transform: translateX(0);
-  }
-}  
-
-@keyframes btn-translate-2 {
-  10% {
-    transform: scale(0.6);
-  }
-  25% {
-    transform: scale(1);
-}
-  30%{
-    transform: translateX(100px);
-  }
-  100%{
-    transform: translateX(0);
-  }
-}
 /*=================== Media for footer END =====================================*/
 /*====================*/
 /*====================*/
@@ -189,3 +170,98 @@
 
 
 
+
+//@media (max-width: 450px) {
+//  .page-header {
+//    &__menu > .inner {
+//      padding-bottom: 80px;
+//      position: relative;
+//    }
+//    &__main-navigation {
+//      position: absolute;
+//      z-index: 10;
+//      top: 70px;
+//      left: 0;
+//      flex-wrap: wrap;
+//      transform: translate(-100%);
+//      background: white;
+//      transition: all 0.5s ease-in-out;
+//      transition-delay: 0.90s;
+//    }
+//    &__main-navigation--translated {
+//      transform: translate(0);
+//    }
+//    &__navigation-item {
+//      text-align: center;
+//      width: 100%;
+//    }
+//    .selected-item:after {
+//      left: 49%;
+//    }
+//    .item-blog {
+//      margin-top: 15px;
+//      margin-bottom: 20px;
+//      justify-content: center;
+//    }
+//    &__open-btn {
+//      //      order: 3;
+//      display: flex;
+//      position: absolute;
+//      top: 85px;
+//      right: 10px;
+//      transform: translateX(0);
+//    }
+//    &__open-btn--animation {
+//      animation-name: btn-translate;
+//      animation-duration: 2.5s;
+//      animation-timing-function: ease-in-out;
+//    }
+//    &__open-btn--animation-2 {
+//      animation-name: btn-translate-2;
+//      animation-duration: 3.5s;
+//      animation-timing-function: ease-in-out;
+//    }
+//    .active:after {
+//      opacity: 0;
+//    }
+//    .active:before {
+//      transform: rotate(90deg) translateX(-10px) translateY(5px);
+//    }
+//    .active {
+//      transform: rotate(45deg);
+//    }
+//    &__navigation-item:hover {
+//      box-shadow: inset 500px 0 0 0 #12a3d6;
+//    }
+//  }
+//}
+
+//@keyframes btn-translate {
+//  10% {
+//    transform: scale(0.6);
+//  }
+//  30% {
+//    transform: scale(1);
+//  }
+//  50% {
+//    transform: translateX(100px);
+//  }
+//  100% {
+//    transform: translateX(0);
+//  }
+//}  
+//
+//@keyframes btn-translate-2 {
+//  10% {
+//    transform: scale(0.6);
+//  }
+//  25% {
+//    transform: scale(1);
+//  }
+//  30% {
+//    transform: translateX(100px);
+//  }
+//  100% {
+//    transform: translateX(0);
+//  }
+//}

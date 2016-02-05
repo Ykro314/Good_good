@@ -8,7 +8,7 @@ main {
 }
 .page-banner {
   padding: 105px 0;
-  background: url("/graph/pict/page-banner-all.jpg") repeat-x top center #2e363e;
+  background: url("../graph/pict/page-banner-all.jpg") repeat-x top center #2e363e;
 }
 .page-banner__title {
   font-size: 80px;
@@ -43,6 +43,8 @@ main {
   border-bottom: 1px solid #dcdcdc;
 }
 .features__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
@@ -58,13 +60,19 @@ main {
   border-right: 1px solid #dcdcdc;
 }
 .features figure {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   height: 130px;
   margin: 0;
-  justify-content: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .features img {
-  align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
 .features .features-item__title {
   margin-bottom: 15px;
@@ -88,9 +96,15 @@ main {
   color: #2190c1;
 }
 .team__wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -103,7 +117,7 @@ main {
   margin-right: 20px;
   margin-left: 20px;
   padding: 12px;
-  background: #fff;
+  background: #ffffff;
   outline: 1px solid #cccccc;
   box-shadow: 10px -10px 0 0 #d3d3d3;
 }
@@ -134,8 +148,12 @@ main {
   color: #94979b;
 }
 .team .team-card .card__skills {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 0 20px 140px;
   padding: 8px 0;
   list-style: none;
@@ -170,7 +188,9 @@ main {
 /*====================================== Media for About-content START =======================================*/
 @media (max-width: 925px) {
   .team__wrap {
-    justify-content: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .team .team-card:nth-child(odd) {
     box-shadow: 10px -10px 0 0 #d3d3d3;
@@ -181,8 +201,12 @@ main {
     padding-bottom: 50px;
   }
   .features__list {
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
   .features-item:nth-child(2) {
     border-right: 1px solid #dcdcdc;

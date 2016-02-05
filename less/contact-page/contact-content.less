@@ -10,7 +10,7 @@ main {
     font-size: 80px;
     text-align: center;
     color: @c-lightgrey-banner;
-  }  
+  }
 }    
 
 .contact {
@@ -22,15 +22,15 @@ main {
     font-family: @ff-bebas;
     color: @c-lightblue;
   }
-  &__content{
-   margin-bottom: 20px;
-   font-size: 13px;
-   line-height: 20px;
-   text-align: center; 
+  &__content {
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
   }
 }
 
-.contact-wrapper { 
+.contact-wrapper {
   display: flex;
 }
 
@@ -54,25 +54,25 @@ main {
     font-size: 13px;
     line-height: 22px;
   }
-  label:after {
+  label: after {
     content: " *";
     color: red;
   }
-  input[type="text"],
-  input[type="email"] {
-    width: 100%;
-    height: 32px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    border: 1px solid #dcdee0;
-    padding: 5px;
-  }
-  textarea {
-    width: 100%;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-     border: 1px solid #dcdee0; 
-  }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      height: 32px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      border: 1px solid #dcdee0;
+      padding: 5px;
+    }
+      textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #dcdee0;
+      }
   &__captcha {
     display: flex;
     position: relative;
@@ -82,7 +82,7 @@ main {
       margin-right: 0;
       text-align: center;
     }
-    label:after {
+    label: after {
       display: none;
     }
   }
@@ -122,14 +122,15 @@ main {
       padding-left: 55px;
       font-size: 13px;
       line-height: 21px;
-      span, a {
+      span,
+      a {
         color: @c-lightblue;
       }
       a {
         text-decoration: underline;
       }
     }
-    li:before{
+    li: before {
       content: "";
       position: absolute;
       top: 0;
@@ -140,22 +141,22 @@ main {
       background-repeat: no-repeat;
       background-position: center;
     }
-    .contact-info__item--telephone:before {
-      background-image: url("/graph/img/contact-icon-telephone.png");
-    }
-    .contact-info__item--home:before {
-      background-image: url("/graph/img/contact-icon-home.png");
-    }
-    .contact-info__item--message:before {
-      background-image: url("/graph/img/contact-icon-message.png"); 
-    }
+      .contact-info__item--telephone:before {
+        background-image: url("/graph/img/contact-icon-telephone.png");
+      }
+        .contact-info__item--home:before {
+          background-image: url("/graph/img/contact-icon-home.png");
+        }
+          .contact-info__item--message:before {
+            background-image: url("/graph/img/contact-icon-message.png");
+          }
   }
   #map {
     width: 320px;
     height: 320px;
     margin: 0 auto;
     margin-bottom: 30px;
-//    background: red;
+    //    background: red;
   }
 } 
 

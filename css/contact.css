@@ -8,7 +8,7 @@ main {
 }
 .page-banner {
   padding: 105px 0;
-  background: url("/graph/pict/page-banner-all.jpg") repeat-x top center #2e363e;
+  background: url("../graph/pict/page-banner-all.jpg") repeat-x top center #2e363e;
 }
 .page-banner__title {
   font-size: 80px;
@@ -32,6 +32,8 @@ main {
   text-align: center;
 }
 .contact-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 .contact-form {
@@ -75,6 +77,8 @@ main {
   border: 1px solid #dcdee0;
 }
 .contact-form__captcha {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
@@ -143,13 +147,13 @@ main {
   background-position: center;
 }
 .contact-info__list .contact-info__item--telephone:before {
-  background-image: url("/graph/img/contact-icon-telephone.png");
+  background-image: url("../graph/img/contact-icon-telephone.png");
 }
 .contact-info__list .contact-info__item--home:before {
-  background-image: url("/graph/img/contact-icon-home.png");
+  background-image: url("../graph/img/contact-icon-home.png");
 }
 .contact-info__list .contact-info__item--message:before {
-  background-image: url("/graph/img/contact-icon-message.png");
+  background-image: url("../graph/img/contact-icon-message.png");
 }
 .contact-info #map {
   width: 320px;
@@ -167,8 +171,12 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .contact-info__follow .follow-us__item {
   display: block;
@@ -178,25 +186,26 @@ main {
   transition: all 0.7s;
 }
 .contact-info__follow .follow-us__item:hover {
-  transform: scale(1.2) rotate(360deg);
+  -webkit-transform: scale(1.2) rotate(360deg);
+          transform: scale(1.2) rotate(360deg);
 }
 .contact-info__follow .icon-tw {
-  background: url("/graph/img/contact-icon-tw.png") no-repeat bottom left #00acf0;
+  background: url("../graph/img/contact-icon-tw.png") no-repeat bottom left #00acf0;
 }
 .contact-info__follow .icon-fb {
-  background: url("/graph/img/contact-icon-fb.png") no-repeat bottom left #3289da;
+  background: url("../graph/img/contact-icon-fb.png") no-repeat bottom left #3289da;
 }
 .contact-info__follow .icon-youtube {
-  background: url("/graph/img/contact-icon-youtube.png") no-repeat bottom left #eb5350;
+  background: url("../graph/img/contact-icon-youtube.png") no-repeat bottom left #eb5350;
 }
 .contact-info__follow .icon-vimeo {
-  background: url("/graph/img/contact-icon-vimeo.png") no-repeat bottom left #20b6ff;
+  background: url("../graph/img/contact-icon-vimeo.png") no-repeat bottom left #20b6ff;
 }
 .contact-info__follow .icon-ln {
-  background: url("/graph/img/contact-icon-ln.png") no-repeat bottom left #0083bd;
+  background: url("../graph/img/contact-icon-ln.png") no-repeat bottom left #0083bd;
 }
 .contact-info__follow .icon-gplus {
-  background: url("/graph/img/contact-icon-gplus.png") no-repeat bottom left #d0422b;
+  background: url("../graph/img/contact-icon-gplus.png") no-repeat bottom left #d0422b;
 }
 /*====================================== Contact-content END =======================================*/
 /*=========================*/
@@ -207,15 +216,21 @@ main {
     padding-left: 0;
   }
   .contact-form__captcha {
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .contact-form__captcha-box {
     width: 60%;
   }
   .contact-form input[type="submit"] {
     position: static;
-    align-self: center;
+    -ms-flex-item-align: center;
+            -webkit-align-self: center;
+            align-self: center;
   }
   .contact-info {
     padding-left: 45px;
@@ -223,8 +238,12 @@ main {
 }
 @media (max-width: 720px) {
   .contact-wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .contact-wrapper .contact-form {
     width: 80%;
