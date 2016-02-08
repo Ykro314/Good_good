@@ -8,7 +8,7 @@ var menu = document.querySelector( ".page-header__main-navigation" );
 menu_btn.addEventListener( "click", function() {
   var menu_icon = menu_btn.querySelector( ".open-btn" );
   var elems = menu.children
-  console.log(1);
+  
   menu_icon.classList.toggle( "open-btn--active" );
   timeOut( elems, 0 );
 });
@@ -127,4 +127,49 @@ function textSlice( elemsArray, strLength ) {
   }
 }
   
+  
+  
+/*============================  Main slider  ==========================*/
+  
+var sliderBg = document.querySelector( ".slider-wrap" );
+var slides = document.querySelectorAll(".slide");
+  
+document.addEventListener( "click", function() {
+  if( event.target.classList.contains( "controls__btn" ) ) {
+    event.preventDefault();
+    
+    var btn = event.target;
+    var index = btn.dataset.index;
+    var controlButtons = document.querySelectorAll( ".controls__btn" );
+    
+    controlButtons.forEach = [].forEach;
+    controlButtons.forEach( function( el, i, arr ){
+      el.classList.remove( "active" );
+    })
+    
+    btn.classList.add( "active" )
+    
+    slides.forEach = [].forEach;
+    slides.forEach( function( el, i, arr ){
+      el.classList.remove( "slide-active" )
+      if( el.dataset.index == index ) {
+        el.classList.add( "slide-active" );
+        console.log( el.offsetWidth );
+        console.log( document.documentElement.clientWidth );
+//        el.style.left = (document.documentElement.clientWidth / 2) - (el.offsetWidth / 2) + "px";
+//        el.style.left = "calc( 50% - " + el.offsetWidth + "px )";
+      }
+    })
+    
+    sliderBg.style.backgroundPosition = ( index * 20 ) * (-1) + "%";
+    
+    
+  }
+  
+})
+
+
+
+
+
 })();
