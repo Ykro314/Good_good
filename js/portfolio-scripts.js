@@ -1,6 +1,32 @@
 (function(){
   
-  /*========================== Category button-list ===============================*/
+/*========================  Mobile navigation slide over  ===========================*/
+  
+var menu_btn = document.querySelector( ".page-header__open-btn-wrapper" );
+var menu = document.querySelector( ".page-header__main-navigation" );
+  
+menu_btn.addEventListener( "click", function() {
+  var menu_icon = menu_btn.querySelector( ".open-btn" );
+  var elems = menu.children
+  console.log(1);
+  menu_icon.classList.toggle( "open-btn--active" );
+  timeOut( elems, 0 );
+});
+  
+function timeOut( arr, i ) {
+  
+  setTimeout(function(){
+    arr[i].classList.toggle( "page-header__navigation-item--view" );
+    
+    if( i !== arr.length ) {
+      timeOut( arr, i + 1 );
+    }
+    
+  },200 );
+  
+};
+  
+/*========================== Category button-list ===============================*/
   
 var category_btn = document.querySelector( ".gallery-nav__category" );
 var category_list = document.querySelector( ".category-list" );
@@ -47,16 +73,26 @@ gallery_panel.addEventListener( "click", function( event ) {
 var gallery_content = document.querySelectorAll( ".gallery-item__intro" );
   
 document.addEventListener( "DOMContentLoaded", function( event ) {
-  
-  for( i = 0; i < gallery_content.length; i++ ) {
-    
-    if( gallery_content[i].textContent.length > 120 ) {
-      gallery_content[i].textContent =  gallery_content[i].textContent.substr(0, 120) + "...";
-    }
-    
-  }
-  
+  textSlice( gallery_content, 120 );
 });
+  
+function textSlice( elemsArray, strLength ) {
+  elemsArray.forEach = [].forEach;
+
+  elemsArray.forEach( function( el, i, arr ){
+    cutString( el, strLength );
+  })
+
+  function cutString( el, strLength ) {
+    var text = el.textContent;
+
+    if( text.length > strLength ) {
+      el.textContent = text.substr( 0, strLength ) + "...";
+    }
+
+  }
+}
+  
 
 /*============================Group list buttons ===========================*/
 var group_list = document.querySelector( ".gallery-nav__groups-list" );

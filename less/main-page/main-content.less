@@ -29,6 +29,7 @@
       font-size: 25px;
       font-family: @ff-ubuntu;
       text-transform: uppercase;
+      transform-origin: left;
       border-radius: 5px;
       background: @c-orange;
       transition: all 0.3s;
@@ -37,6 +38,27 @@
         z-index: 10;
       }
     }
+    .slider__btn:hover {
+      animation: rot-2 0.5s ease-in-out;
+    }
+@keyframes rot { 
+  30% {
+    transform: rotate( 2deg );
+  }
+  70% {
+    transform-origin: right;
+    transform: rotate( -2deg );
+  }
+}
+@keyframes rot-2 {
+  30% {
+    transform: rotate( 2deg ) skewY( 1.5deg );
+  }
+  70% {
+    transform-origin: right;
+    transform: rotate( -2deg ) skewY( -1.5deg );
+  }
+}
     /*.slider__btn:before {
       position: absolute;
       top: 0;

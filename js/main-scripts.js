@@ -30,9 +30,9 @@ function timeOut( arr, i ) {
 
 var rippleClickBtn = document.querySelector( ".slider__btn" );
 
-  rippleClickBtn.addEventListener( "click", addRippleEffect);
+rippleClickBtn.addEventListener( "click", addRippleEffect);
 
-  function addRippleEffect( event ) {
+function addRippleEffect( event ) {
     event.preventDefault();
     var btn = event.target;
 
@@ -101,5 +101,30 @@ for( var i = 0; i < element.length; i++ ) {
     showPhrase();
   }, false );
 };
+  
+/*============================  Textcontent slice onload  ==========================*/
+  
+var offerContent = document.querySelectorAll( ".offer-item__content");
+var servicesContent = document.querySelectorAll( ".services__item-content");
+
+document.addEventListener( "DOMContentLoaded", function( event ) {
+  textSlice( offerContent, 140 );
+});
+  
+function textSlice( elemsArray, strLength ) {
+  elemsArray.forEach = [].forEach;
+
+  elemsArray.forEach( function( el, i, arr ){
+    cutString( el, strLength );
+  })
+
+  function cutString( el, strLength ) {
+    var text = el.textContent;
+
+    if( text.length > strLength ) {
+      el.textContent = text.substr( 0, strLength ) + "...";
+    }
+  }
+}
   
 })();
