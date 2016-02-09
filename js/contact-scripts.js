@@ -28,14 +28,21 @@ function timeOut( arr, i ) {
 /*========================  Google map  ===========================*/
   
 function initialize() {
+  var markerCoords = {lat: 29.767448, lng: -95.365962}
   var mapOptions = {
-    center: new google.maps.LatLng(44.5403, -78.5463),
-    zoom: 8,
+    center: new google.maps.LatLng( markerCoords.lat, markerCoords.lng ),
+    zoom: 7,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true
   }
   var mapCanvas = document.getElementById("map");
+  
   var map = new google.maps.Map(mapCanvas, mapOptions); 
+  var marker = new google.maps.Marker({
+    position: markerCoords,
+    map: map,
+    title: "We are here."
+  })
 }
   
 google.maps.event.addDomListener(window, 'load', initialize);

@@ -28,9 +28,18 @@ function timeOut( arr, i ) {
   
 /*================================= Ripple effect button =============================*/
 
-var rippleClickBtn = document.querySelector( ".slider__btn" );
+var rippleClickBtn = document.querySelectorAll( ".slider__btn" );
+var headerSlider = document.querySelector( ".page__slider" )
+headerSlider.addEventListener( "click", function ( event ){
+  var btn = event.target;
+  
+  if( btn.classList.contains( "slider__btn" ) || btn.parentElement.classList.contains( "slider__btn" ) ) {
+    addRippleEffect( event );
+  } 
+  
+})
 
-rippleClickBtn.addEventListener( "click", addRippleEffect);
+//rippleClickBtn.addEventListener( "click", addRippleEffect);
 
 function addRippleEffect( event ) {
     event.preventDefault();
@@ -134,9 +143,45 @@ function textSlice( elemsArray, strLength ) {
 var sliderBg = document.querySelector( ".slider-wrap" );
 var slides = document.querySelectorAll(".slide");
   
-document.addEventListener( "click", function() {
+document.addEventListener( "click", function( event ) {
   if( event.target.classList.contains( "controls__btn" ) ) {
-    event.preventDefault();
+    mainSlider( event );
+  }
+})
+
+function mainSlider( event ) {
+  var index = event.target.dataset.index;
+  var displayWidth = document.documentElement.clientWidth;
+  var controlButtonsArray = document.querySelectorAll( ".controls__btn" );
+  var slidesArray = document.querySelectorAll( ".slide" );
+  var sliderBg = document.querySelector( ".slider-wrap" );
+  
+  event.preventDefault();
+  iterate( controlButtonsArray, "active" );
+  iterate( slidesArray, "slide-active" );
+  sliderBg.style.backgroundPosition = displayWidth * 0.8 * ( -index ) + "px"; 
+  
+  function iterate( collection, classToRemove, classToAdd ) {
+    collection.forEach = [].forEach;
+    classToAdd = classToAdd || classToRemove;
+    
+    collection.forEach( function( el, i, arr ) {
+      el.classList.remove( classToRemove );
+      
+      if( el.dataset.index == index ) {
+        el.classList.add( classToAdd );
+      };
+    });
+  }
+  
+}
+
+})();
+
+
+
+
+   /* event.preventDefault();
     
     var btn = event.target;
     var index = btn.dataset.index;
@@ -154,22 +199,7 @@ document.addEventListener( "click", function() {
       el.classList.remove( "slide-active" )
       if( el.dataset.index == index ) {
         el.classList.add( "slide-active" );
-        console.log( el.offsetWidth );
-        console.log( document.documentElement.clientWidth );
-//        el.style.left = (document.documentElement.clientWidth / 2) - (el.offsetWidth / 2) + "px";
-//        el.style.left = "calc( 50% - " + el.offsetWidth + "px )";
       }
     })
     
-    sliderBg.style.backgroundPosition = ( index * 20 ) * (-1) + "%";
-    
-    
-  }
-  
-})
-
-
-
-
-
-})();
+    sliderBg.style.backgroundPosition = (document.documentElement.clientWidth * 0.8) * (-index) + "px";*/
