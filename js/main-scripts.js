@@ -28,7 +28,6 @@ function timeOut( arr, i ) {
   
 /*================================= Ripple effect button =============================*/
 
-var rippleClickBtn = document.querySelectorAll( ".slider__btn" );
 var headerSlider = document.querySelector( ".page__slider" )
 headerSlider.addEventListener( "click", function ( event ){
   var btn = event.target;
