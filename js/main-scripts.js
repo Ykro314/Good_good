@@ -149,7 +149,7 @@ document.addEventListener( "click", function( event ) {
 })
 
 function mainSlider( event ) {
-  var index = event.target.dataset.index;
+  var index = event.target.getAttribute( "data-index" );
   var displayWidth = document.documentElement.clientWidth;
   var controlButtonsArray = document.querySelectorAll( ".controls__btn" );
   var slidesArray = document.querySelectorAll( ".slide" );
@@ -167,7 +167,7 @@ function mainSlider( event ) {
     collection.forEach( function( el, i, arr ) {
       el.classList.remove( classToRemove );
       
-      if( el.dataset.index == index ) {
+      if( el.getAttribute( "data-index" ) == index ) {
         el.classList.add( classToAdd );
       };
     });
