@@ -71,7 +71,7 @@ main {
 }
 .features img {
   -ms-flex-item-align: center;
-      -webkit-align-self: center;
+          -webkit-align-self: center;
           align-self: center;
 }
 .features .features-item__title {
